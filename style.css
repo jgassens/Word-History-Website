@@ -403,6 +403,18 @@ h3 {
   background: rgba(10, 132, 255, 0.07);
 }
 
+.download-meta {
+  max-width: 620px;
+  font-size: 0.92rem;
+}
+
+.download-meta code {
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  vertical-align: middle;
+}
+
 @media (max-width: 800px) {
   .site-header,
   .site-footer,
