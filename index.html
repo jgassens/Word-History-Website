@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Word History for macOS</title>
+    <meta
+      name="description"
+      content="Word History is a local-first macOS app that preserves Microsoft Word AutoRecover history as immutable snapshots."
+    >
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Word History home">
+        <span class="brand-mark">WH</span>
+        <span>Word History</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="downloads.html">Downloads</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Local snapshot history for Microsoft Word</p>
+          <h1>Recover the draft Word did not mean to keep.</h1>
+          <p class="lead">
+            Word History watches your chosen Word AutoRecover folder and preserves
+            recoverable document versions as a private, local timeline on your Mac.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="downloads.html">Download Status</a>
+            <a class="button secondary" href="privacy.html">Privacy Details</a>
+          </div>
+        </div>
+        <div class="product-panel" aria-label="Word History feature summary">
+          <div class="window-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item active">
+              <span class="time">Now</span>
+              <strong>Chapter Draft.docx</strong>
+              <small>Snapshot captured from AutoRecover</small>
+            </div>
+            <div class="timeline-item">
+              <span class="time">12:42 PM</span>
+              <strong>Chapter Draft.docx</strong>
+              <small>Earlier recoverable version</small>
+            </div>
+            <div class="timeline-item">
+              <span class="time">11:18 AM</span>
+              <strong>Chapter Draft.docx</strong>
+              <small>Preview available locally</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">What it does</p>
+          <h2>A quiet safety layer for Word AutoRecover.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Watches your recovery folder</h3>
+            <p>
+              Point Microsoft Word and Word History at the same AutoRecover folder.
+              The app monitors that folder for recoverable document artifacts.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Stores immutable snapshots</h3>
+            <p>
+              Captured versions are copied into Word History's local storage so
+              later Word cleanup or overwrites do not erase the record.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Restores when needed</h3>
+            <p>
+              Use a normal copy restore or recover through Word when you need to
+              inspect or revive an earlier AutoRecover version.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split-section">
+        <div>
+          <p class="eyebrow">Privacy first</p>
+          <h2>Designed to stay on your Mac.</h2>
+        </div>
+        <div class="copy-stack">
+          <p>
+            Word History does not require an account, cloud sync, or a remote
+            document service. Its job is to preserve local Word AutoRecover history
+            in local app storage.
+          </p>
+          <p>
+            The recommended setup uses a user-managed folder, usually
+            <code>~/Documents/WordAutorecovery</code>, so Word and Word History
+            share a clear, user-controlled location.
+          </p>
+          <a class="text-link" href="privacy.html">Read the privacy policy</a>
+        </div>
+      </section>
+
+      <section class="status-band" aria-labelledby="download-heading">
+        <div>
+          <p class="eyebrow">Download</p>
+          <h2 id="download-heading">Notarized DMG coming soon.</h2>
+          <p>
+            The public download link will be posted after the signed and notarized
+            macOS build is ready for distribution.
+          </p>
+        </div>
+        <a class="button primary" href="downloads.html">View Downloads</a>
+      </section>
+
+      <section class="section support-preview">
+        <div class="section-heading">
+          <p class="eyebrow">Support</p>
+          <h2>Need help setting it up?</h2>
+        </div>
+        <p>
+          Support instructions cover the shared AutoRecover folder setup, monitoring
+          status, permissions, and what to include when reporting an issue.
+        </p>
+        <a class="button secondary" href="support.html">Get Support</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Word History for macOS</span>
+      <nav aria-label="Footer navigation">
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+        <a href="downloads.html">Downloads</a>
+      </nav>
+    </footer>
+  </body>
+</html>
