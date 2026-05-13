@@ -5,6 +5,14 @@
         <item>
             <title>1.0</title>
             <pubDate>Wed, 13 May 2026 11:41:00 -0500</pubDate>
+            <sparkle:version>6</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://word-history-website.pages.dev/assets/WordHistory.dmg" length="9088522" type="application/octet-stream" sparkle:edSignature="oxhBFcrkTBKFqyfOdVzW0Gy33O0sOoddNSOisuV01pNdABPHKWnqSlyt35kVptxdCWFXHjzr4lqSwbnzvbYtCQ=="/>
+        </item>
+        <item>
+            <title>1.0</title>
+            <pubDate>Wed, 13 May 2026 11:41:00 -0500</pubDate>
             <sparkle:version>5</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
