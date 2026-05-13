@@ -4,11 +4,11 @@
         <title>Word History</title>
         <item>
             <title>1.0</title>
-            <pubDate>Wed, 13 May 2026 11:24:23 -0500</pubDate>
-            <sparkle:version>2</sparkle:version>
+            <pubDate>Wed, 13 May 2026 11:41:00 -0500</pubDate>
+            <sparkle:version>4</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://word-history-website.pages.dev/assets/WordHistory.dmg" length="7835401" type="application/octet-stream"/>
+            <enclosure url="https://word-history-website.pages.dev/assets/WordHistory.dmg" length="9088242" type="application/octet-stream" sparkle:edSignature="SH9ZkvcElzNouvZGzN1w5HrxCWPhMkEfQsGTNEdeGQjHCACAQ+5F00uh7g0BMAyaSqibT/rgsE2Bq6fR4HPvCQ=="/>
         </item>
     </channel>
 </rss>
