@@ -5,26 +5,10 @@
         <item>
             <title>1.0</title>
             <pubDate>Wed, 13 May 2026 11:41:00 -0500</pubDate>
-            <sparkle:version>6</sparkle:version>
+            <sparkle:version>7</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://word-history-website.pages.dev/assets/WordHistory.dmg" length="9088522" type="application/octet-stream" sparkle:edSignature="oxhBFcrkTBKFqyfOdVzW0Gy33O0sOoddNSOisuV01pNdABPHKWnqSlyt35kVptxdCWFXHjzr4lqSwbnzvbYtCQ=="/>
-        </item>
-        <item>
-            <title>1.0</title>
-            <pubDate>Wed, 13 May 2026 11:41:00 -0500</pubDate>
-            <sparkle:version>5</sparkle:version>
-            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://word-history-website.pages.dev/assets/WordHistory.dmg" length="9094562" type="application/octet-stream" sparkle:edSignature="0r0TvZ0Zg4vlu7ngI/2m6OZjyujjA6w0yiFLobY1xB8VINFlqbW1U2SwjWAMkAQCRZ0F91txAzZh/m4tFZsIAQ=="/>
-        </item>
-        <item>
-            <title>1.0</title>
-            <pubDate>Wed, 13 May 2026 11:41:00 -0500</pubDate>
-            <sparkle:version>4</sparkle:version>
-            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://word-history-website.pages.dev/assets/WordHistory.dmg" length="9088242" type="application/octet-stream" sparkle:edSignature="SH9ZkvcElzNouvZGzN1w5HrxCWPhMkEfQsGTNEdeGQjHCACAQ+5F00uh7g0BMAyaSqibT/rgsE2Bq6fR4HPvCQ=="/>
+            <enclosure url="https://word-history-website.pages.dev/assets/WordHistory.dmg" length="9090757" type="application/octet-stream" sparkle:edSignature="T6+r3xE4HLbG6q2vEJ5rQeFxiuHpsOWSjvdfyQbit9SHtNK2Mk/T+ww84YiE+gWL0ixD1tGL0GMmJSxv/fbmBQ=="/>
         </item>
     </channel>
 </rss>
