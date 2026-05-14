@@ -3,12 +3,12 @@
     <channel>
         <title>Word History</title>
         <item>
-            <title>1.0</title>
+            <title>1.8</title>
             <pubDate>Wed, 13 May 2026 11:41:00 -0500</pubDate>
-            <sparkle:version>7</sparkle:version>
-            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:version>8</sparkle:version>
+            <sparkle:shortVersionString>1.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://word-history-website.pages.dev/assets/WordHistory.dmg" length="9090757" type="application/octet-stream" sparkle:edSignature="T6+r3xE4HLbG6q2vEJ5rQeFxiuHpsOWSjvdfyQbit9SHtNK2Mk/T+ww84YiE+gWL0ixD1tGL0GMmJSxv/fbmBQ=="/>
+            <enclosure url="https://word-history-website.pages.dev/assets/WordHistory.dmg" length="9089039" type="application/octet-stream" sparkle:edSignature="3m8gfw8SXlySoZJUTgSHL5ARduW6ZGj55gtv2rjo8p0Wlv1L55dCLnfUMf5lF2+ZcM6OL5ULYFSEtgHoqHNVCQ=="/>
         </item>
     </channel>
 </rss>
