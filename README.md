@@ -2,7 +2,7 @@
 
 Static marketing, privacy, support, and download pages for the Ināt published
 apps landing site. The home page links out to Word History, Codex Terminal Pro,
-and PubMate, with Word History download/support pages still hosted here.
+CalShot, and PubMate, with macOS DMG downloads hosted here where available.
 
 ## Cloudflare Pages
 

@@ -9,8 +9,10 @@
   --line-dark: #111111;
   --blue: #0057ff;
   --green: #008f5a;
+  --red: #c7352f;
   --amber: #d47a00;
   --word: #0057ff;
+  --calshot: #c7352f;
   --codex: #008f5a;
   --pubmate: #d47a00;
   --radius: 4px;
@@ -233,6 +235,10 @@ h3 {
   --signal: var(--word);
 }
 
+.calshot-signal {
+  --signal: var(--calshot);
+}
+
 .codex-signal {
   --signal: var(--codex);
 }
@@ -368,6 +374,10 @@ dd,
   background: var(--word);
 }
 
+.calshot-signal + .spec-grid .object-panel::before {
+  background: var(--calshot);
+}
+
 .codex-signal + .spec-grid .object-panel::before {
   background: var(--codex);
 }
@@ -399,6 +409,31 @@ dd,
 
 .word-object span:nth-child(3) {
   width: 44%;
+}
+
+.calshot-object {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: center;
+  gap: 1px;
+  padding: 48px;
+}
+
+.calshot-object span {
+  display: grid;
+  min-height: 72px;
+  place-items: center;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--font-din);
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.calshot-object span:first-child {
+  border-color: var(--calshot);
+  color: var(--calshot);
 }
 
 .terminal-object {
@@ -510,11 +545,35 @@ dd,
 
 .download-card,
 .status-band {
+  --signal: var(--blue);
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 1.5rem;
   align-items: end;
-  padding: 1.2rem 0 2.4rem;
+  padding: 1.2rem 0 2.4rem 1rem;
+}
+
+.download-card::before {
+  content: "";
+  position: absolute;
+  top: 1.2rem;
+  bottom: 2.4rem;
+  left: 0;
+  width: 3px;
+  background: var(--signal);
+}
+
+.download-card.word-signal {
+  --signal: var(--word);
+}
+
+.download-card.calshot-signal {
+  --signal: var(--calshot);
+}
+
+.download-card.pubmate-signal {
+  --signal: var(--pubmate);
 }
 
 .download-card h2,
@@ -545,6 +604,14 @@ dd,
   background: var(--blue);
   border-color: var(--blue);
   color: var(--surface);
+}
+
+.word-signal .button:hover,
+.calshot-signal .button:hover,
+.codex-signal .button:hover,
+.pubmate-signal .button:hover {
+  background: var(--signal);
+  border-color: var(--signal);
 }
 
 .text-link {
