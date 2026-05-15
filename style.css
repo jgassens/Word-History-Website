@@ -9,6 +9,10 @@
   --line-dark: #111111;
   --blue: #0057ff;
   --green: #008f5a;
+  --amber: #d47a00;
+  --word: #0057ff;
+  --codex: #008f5a;
+  --pubmate: #d47a00;
   --radius: 4px;
   --font-din:
     "DIN 2014",
@@ -212,6 +216,8 @@ h3 {
 }
 
 .product-row {
+  --signal: var(--muted);
+  position: relative;
   display: grid;
   grid-template-columns: 72px minmax(180px, 1.25fr) minmax(130px, 0.65fr) minmax(180px, 1fr) 72px;
   gap: 1rem;
@@ -223,8 +229,37 @@ h3 {
   text-decoration: none;
 }
 
+.word-signal {
+  --signal: var(--word);
+}
+
+.codex-signal {
+  --signal: var(--codex);
+}
+
+.pubmate-signal {
+  --signal: var(--pubmate);
+}
+
+.product-row::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  left: 0;
+  width: 3px;
+  background: var(--signal);
+}
+
 .product-row:hover {
   border-bottom-color: var(--line-dark);
+}
+
+.product-row:hover .product-name,
+.product-row:hover .product-code,
+.product-row:hover .product-action,
+.app-hero .index-number {
+  color: var(--signal);
 }
 
 .product-code,
@@ -235,6 +270,10 @@ dt {
   font-size: 0.74rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+.product-code {
+  padding-left: 18px;
 }
 
 .product-name {
@@ -325,6 +364,18 @@ dd,
   background: var(--blue);
 }
 
+.word-signal + .spec-grid .object-panel::before {
+  background: var(--word);
+}
+
+.codex-signal + .spec-grid .object-panel::before {
+  background: var(--codex);
+}
+
+.pubmate-signal + .spec-grid .object-panel::before {
+  background: var(--pubmate);
+}
+
 .word-object {
   display: grid;
   align-content: center;
@@ -362,7 +413,7 @@ dd,
 }
 
 .terminal-object::before {
-  background: var(--green);
+  background: var(--codex);
 }
 
 .status-dot::before {
@@ -372,7 +423,7 @@ dd,
   height: 7px;
   margin-right: 0.55rem;
   border-radius: 50%;
-  background: var(--green);
+  background: var(--codex);
 }
 
 .pubmate-object {
@@ -390,6 +441,10 @@ dd,
   color: var(--ink);
   font-family: var(--font-din);
   font-size: 0.78rem;
+}
+
+.pubmate-object span:nth-child(3) {
+  color: var(--pubmate);
 }
 
 .pubmate-object span:last-child {
@@ -487,7 +542,8 @@ dd,
 }
 
 .button:hover {
-  background: var(--ink);
+  background: var(--blue);
+  border-color: var(--blue);
   color: var(--surface);
 }
 
@@ -535,13 +591,22 @@ dd,
   .product-row {
     gap: 0.35rem;
     min-height: 0;
-    padding: 1.15rem 0;
+    padding: 1.15rem 0 1.15rem 1rem;
+  }
+
+  .product-row::before {
+    top: 1.25rem;
+    bottom: 1.25rem;
   }
 
   .product-code,
   .product-kind,
   .product-action {
     font-size: 0.7rem;
+  }
+
+  .product-code {
+    padding-left: 0;
   }
 
   .principles {
