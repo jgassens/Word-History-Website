@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PubMate | Ināt Apps</title>
+    <meta
+      name="description"
+      content="PubMate bridges Microsoft Word manuscript drafting and Clarivate EndNote by converting PMID and DOI markers into EndNote-ready files."
+    >
+    <link rel="canonical" href="https://jeremiahsrandom.website/pubmate.html">
+    <link rel="image_src" href="https://jeremiahsrandom.website/social-preview-linkedin.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ināt Apps">
+    <meta property="og:url" content="https://jeremiahsrandom.website/pubmate.html">
+    <meta property="og:title" content="PubMate">
+    <meta property="og:description" content="Convert PMID and DOI markers in Word documents into EndNote import records and temporary citations.">
+    <meta property="og:image" content="https://jeremiahsrandom.website/social-preview-linkedin.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PubMate">
+    <meta name="twitter:description" content="Convert PMID and DOI markers in Word documents into EndNote import records and temporary citations.">
+    <meta name="twitter:image" content="https://jeremiahsrandom.website/social-preview-linkedin.jpg">
+    <link rel="icon" href="assets/inat-logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Ināt Apps home">
+        <span class="brand-mark">IA</span>
+        <span class="brand-copy">
+          <span class="brand-name">Ināt Apps</span>
+          <span class="brand-maker">
+            <img src="assets/inat-logo.png" alt="" width="18" height="20">
+            by Ināt
+          </span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Apps</a>
+        <a href="word-history.html">Word History</a>
+        <a href="codex-terminal-pro.html">Codex Terminal Pro</a>
+        <a href="pubmate.html" aria-current="page">PubMate</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="detail-hero pubmate-page">
+        <div class="hero-copy">
+          <div class="app-title-row">
+            <span class="app-avatar text-mark large">PM</span>
+            <div>
+              <h1>PubMate</h1>
+              <p>Manuscript drafting to Clarivate EndNote, without field-code stunts.</p>
+            </div>
+          </div>
+          <p class="lead">
+            PubMate scans Microsoft Word <code>.docx</code> manuscripts for
+            PMID and DOI markers, fetches reference metadata, and writes the
+            EndNote import file and rewritten Word document needed for Cite
+            While You Write.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/jgassens/PubMate">View on GitHub</a>
+            <a class="button secondary" href="#workflow">See Workflow</a>
+          </div>
+        </div>
+        <div class="pubmate-visual" aria-label="PubMate conversion preview">
+          <div class="document-sheet">
+            <span class="sheet-title">manuscript.docx</span>
+            <p>Recent MOF vaccine literature <mark>PMID: 38727538</mark> supports the design.</p>
+            <p>Related synthesis work <mark>DOI: 10.1039/d4nr01180e</mark> is cited here.</p>
+            <p class="comment-line">Comment anchor: <mark>PMID: 3139738</mark></p>
+          </div>
+          <div class="conversion-rail" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="output-stack">
+            <div>
+              <strong>.endnote-import.enw</strong>
+              <small>Canonical EndNote tagged import records</small>
+            </div>
+            <div>
+              <strong>.endnote.docx</strong>
+              <small>Temporary citations ready for CWYW update</small>
+            </div>
+            <div>
+              <strong>.report.json</strong>
+              <small>Resolved, skipped, warning, and error proof</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="workflow">
+        <div class="section-heading">
+          <p class="eyebrow">Workflow</p>
+          <h2>Draft with lightweight markers. Finish with real EndNote records.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Scans the manuscript</h3>
+            <p>
+              Finds explicit PMID markers, DOI labels, DOI resolver URLs, tables,
+              and Word comments while skipping the final reference section by default.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Builds import records</h3>
+            <p>
+              Resolves PMIDs through PubMed, checks DOIs against PubMed first,
+              and falls back to DOI metadata when a paper has no PubMed record.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Hands off to EndNote</h3>
+            <p>
+              Writes <code>.endnote-import.enw</code> plus an <code>.endnote.docx</code>
+              containing EndNote temporary citations for Update Citations and Bibliography.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split-section">
+        <div>
+          <p class="eyebrow">Boundary</p>
+          <h2>PubMate does not fake EndNote field codes.</h2>
+        </div>
+        <div class="copy-stack">
+          <p>
+            EndNote Cite While You Write fields are Word field-code objects owned
+            by EndNote. PubMate uses EndNote-supported temporary citations and
+            import files instead of trying to hand-write brittle CWYW internals.
+          </p>
+          <p>
+            The original input document is left untouched. PubMate writes a
+            separate output document, import file, optional PubMed NBIB, and a
+            JSON processing report so authors can review exactly what happened.
+          </p>
+        </div>
+      </section>
+
+      <section class="status-band" aria-labelledby="pubmate-github-heading">
+        <div>
+          <p class="eyebrow">Source</p>
+          <h2 id="pubmate-github-heading">Open the PubMate repository.</h2>
+          <p>
+            The repository includes CLI usage, macOS launcher notes, test
+            coverage, and details for PMID, DOI, Word comment, and EndNote import behavior.
+          </p>
+        </div>
+        <a class="button primary" href="https://github.com/jgassens/PubMate">Open GitHub</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span>PubMate</span>
+        <span class="footer-maker">
+          <img src="assets/inat-logo.png" alt="" width="18" height="20">
+          Built by Ināt
+        </span>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="index.html">Apps</a>
+        <a href="word-history.html">Word History</a>
+        <a href="codex-terminal-pro.html">Codex Terminal Pro</a>
+        <a href="https://github.com/jgassens/PubMate">GitHub</a>
+      </nav>
+    </footer>
+  </body>
+</html>

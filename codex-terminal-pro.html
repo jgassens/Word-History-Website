@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Codex Terminal Pro | Ināt Apps</title>
+    <meta
+      name="description"
+      content="An unofficial Home Assistant add-on that runs OpenAI Codex CLI in a browser terminal starting in /config."
+    >
+    <link rel="canonical" href="https://jeremiahsrandom.website/codex-terminal-pro.html">
+    <link rel="image_src" href="https://jeremiahsrandom.website/assets/codex-terminal-pro-screenshot.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ināt Apps">
+    <meta property="og:url" content="https://jeremiahsrandom.website/codex-terminal-pro.html">
+    <meta property="og:title" content="Codex Terminal Pro for Home Assistant">
+    <meta property="og:description" content="Run OpenAI Codex CLI inside Home Assistant ingress with a persistent terminal, image uploads, and Home Assistant tooling.">
+    <meta property="og:image" content="https://jeremiahsrandom.website/assets/codex-terminal-pro-screenshot.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Codex Terminal Pro for Home Assistant">
+    <meta name="twitter:description" content="Run OpenAI Codex CLI inside Home Assistant ingress with a persistent terminal, image uploads, and Home Assistant tooling.">
+    <meta name="twitter:image" content="https://jeremiahsrandom.website/assets/codex-terminal-pro-screenshot.png">
+    <link rel="icon" href="assets/inat-logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Ināt Apps home">
+        <span class="brand-mark">IA</span>
+        <span class="brand-copy">
+          <span class="brand-name">Ināt Apps</span>
+          <span class="brand-maker">
+            <img src="assets/inat-logo.png" alt="" width="18" height="20">
+            by Ināt
+          </span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Apps</a>
+        <a href="word-history.html">Word History</a>
+        <a href="codex-terminal-pro.html" aria-current="page">Codex Terminal Pro</a>
+        <a href="pubmate.html">PubMate</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="detail-hero terminal-page">
+        <div class="hero-copy">
+          <div class="app-title-row">
+            <img src="assets/codex-terminal-pro-logo.png" alt="" width="56" height="56">
+            <div>
+              <h1>Codex Terminal Pro</h1>
+              <p>Unofficial OpenAI Codex CLI terminal for Home Assistant.</p>
+            </div>
+          </div>
+          <p class="lead">
+            A Home Assistant add-on that opens Codex inside an ingress browser
+            terminal, starts in <code>/config</code>, and keeps the tools needed
+            for real Home Assistant work close at hand.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fjgassens%2Fcodex-terminal-pro">
+              Add to Home Assistant
+            </a>
+            <a class="button secondary" href="https://github.com/jgassens/codex-terminal-pro">GitHub</a>
+          </div>
+        </div>
+        <figure class="screenshot-frame">
+          <img src="assets/codex-terminal-pro-screenshot.png" alt="Codex Terminal Pro running in a Home Assistant browser terminal.">
+        </figure>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">What it gives you</p>
+          <h2>Codex where Home Assistant configuration actually lives.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Ingress terminal</h3>
+            <p>
+              Opens from the Home Assistant sidebar for admin users and runs in a
+              browser terminal powered by ttyd.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Persistent sessions</h3>
+            <p>
+              Codex runs inside tmux so refreshes, websocket drops, and sidebar
+              navigation can reattach instead of starting over.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Home Assistant tools</h3>
+            <p>
+              Includes Codex CLI, Home Assistant CLI, GitHub CLI, image uploads,
+              persistent packages, and state under <code>/data/.codex</code>.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split-section">
+        <div>
+          <p class="eyebrow">Headless auth</p>
+          <h2>Built around device-code login instead of localhost callbacks.</h2>
+        </div>
+        <div class="copy-stack">
+          <p>
+            Browser callback login from inside Home Assistant can point at the
+            wrong machine. Codex Terminal Pro guides first-time setup toward the
+            <code>codex-auth-helper</code> device-code flow, which is more
+            reliable inside an add-on container.
+          </p>
+          <p>
+            The add-on is intentionally admin-only because it can inspect and
+            edit Home Assistant configuration. Back up first, inspect diffs, run
+            <code>ha core check</code>, and restart only after the checks pass.
+          </p>
+        </div>
+      </section>
+
+      <section class="status-band" aria-labelledby="codex-install-heading">
+        <div>
+          <p class="eyebrow">Install</p>
+          <h2 id="codex-install-heading">Install from the GitHub add-on repository.</h2>
+          <p>
+            Add the repository to Home Assistant's add-on store to receive
+            updates from GitHub instead of using a local development install.
+          </p>
+        </div>
+        <a class="button primary" href="https://github.com/jgassens/codex-terminal-pro">Open Repository</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span>Codex Terminal Pro</span>
+        <span class="footer-maker">
+          <img src="assets/inat-logo.png" alt="" width="18" height="20">
+          Built by Ināt
+        </span>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="index.html">Apps</a>
+        <a href="word-history.html">Word History</a>
+        <a href="pubmate.html">PubMate</a>
+        <a href="https://github.com/jgassens/codex-terminal-pro">GitHub</a>
+      </nav>
+    </footer>
+  </body>
+</html>
