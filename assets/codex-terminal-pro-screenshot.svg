@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1050" viewBox="0 0 1800 1050">
+  <defs>
+    <style>
+      .title { font-family: Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 700; fill: #f5f7f8; }
+      .label { font-family: Arial, Helvetica, sans-serif; font-size: 21px; font-weight: 700; fill: #202327; }
+      .nav { font-family: Arial, Helvetica, sans-serif; font-size: 21px; font-weight: 700; fill: #25282c; }
+      .nav-muted { fill: #7a7f85; }
+      .terminal { font-family: "Courier New", Courier, monospace; font-size: 23px; font-weight: 700; fill: #c9c9c9; }
+      .terminal-small { font-family: "Courier New", Courier, monospace; font-size: 22px; font-weight: 700; fill: #c9c9c9; }
+      .terminal-muted { fill: #858585; }
+      .terminal-dim { fill: #666666; }
+      .terminal-cyan { fill: #64f2ef; }
+      .terminal-green { fill: #b8e0b1; }
+      .terminal-blue { fill: #9ebaff; }
+      .terminal-yellow { fill: #d7c229; }
+      .terminal-purple { fill: #d9a4ff; }
+      .terminal-orange { fill: #f0a56e; }
+    </style>
+    <filter id="screenShadow" x="-6%" y="-6%" width="112%" height="112%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1800" height="1050" fill="#f7f8f9"/>
+  <g filter="url(#screenShadow)">
+    <rect x="42" y="36" width="1716" height="978" rx="18" fill="#ffffff"/>
+    <rect x="42" y="36" width="1716" height="978" rx="18" fill="none" stroke="#d8dde2" stroke-width="2"/>
+
+    <rect x="42" y="36" width="344" height="978" rx="18" fill="#ffffff"/>
+    <path d="M386 36 V1014" stroke="#d8dde2" stroke-width="2"/>
+    <rect x="42" y="36" width="344" height="92" rx="18" fill="#ffffff"/>
+    <path d="M42 128 H386" stroke="#e3e6e8" stroke-width="2"/>
+    <text class="label" x="106" y="96">Home Assistant</text>
+    <g transform="translate(66 78)" stroke="#7a7f85" stroke-width="4" stroke-linecap="round">
+      <path d="M0 0 H20"/>
+      <path d="M0 10 H20"/>
+      <path d="M0 20 H12"/>
+    </g>
+
+    <g class="nav">
+      <g transform="translate(0 0)">
+        <rect x="62" y="168" width="26" height="26" rx="4" fill="#7b7f84"/>
+        <text x="124" y="191">Activity</text>
+      </g>
+      <g transform="translate(0 72)">
+        <rect x="62" y="168" width="26" height="26" rx="4" fill="#7b7f84"/>
+        <text x="124" y="191">History</text>
+      </g>
+      <g transform="translate(0 144)">
+        <path d="M64 176 L78 162 L96 180 L82 194 Z" fill="#7b7f84"/>
+        <text x="124" y="191">File editor</text>
+      </g>
+      <g transform="translate(0 216)">
+        <rect x="62" y="168" width="30" height="24" rx="2" fill="#7b7f84"/>
+        <text x="124" y="191">HACS</text>
+      </g>
+      <g transform="translate(0 288)">
+        <rect x="62" y="168" width="26" height="26" rx="4" fill="#7b7f84"/>
+        <text x="124" y="191">Media</text>
+      </g>
+      <g transform="translate(0 360)">
+        <rect x="62" y="168" width="30" height="24" rx="3" fill="none" stroke="#7b7f84" stroke-width="4"/>
+        <path d="M69 176 L77 184 L69 192" fill="none" stroke="#7b7f84" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M80 192 H89" stroke="#7b7f84" stroke-width="4" stroke-linecap="round"/>
+        <text x="124" y="191">Terminal</text>
+      </g>
+      <g transform="translate(0 432)">
+        <rect x="42" y="154" width="330" height="58" rx="4" fill="#e8f5fb"/>
+        <rect x="62" y="169" width="30" height="28" rx="4" fill="#49a8d0"/>
+        <text x="72" y="191" fill="#ffffff" font-size="18" font-weight="700">{}</text>
+        <text x="124" y="191" fill="#49a8d0">Codex Terminal Pro</text>
+      </g>
+      <g transform="translate(0 504)">
+        <rect x="62" y="168" width="26" height="26" rx="4" fill="#7b7f84"/>
+        <text x="124" y="191">Settings</text>
+      </g>
+      <g transform="translate(0 576)">
+        <path d="M76 164 C68 164 64 171 64 180 V190 H88 V180 C88 171 84 164 76 164 Z" fill="#7b7f84"/>
+        <text x="124" y="191">Notifications</text>
+      </g>
+    </g>
+    <circle cx="82" cy="958" r="34" fill="#bdeeff"/>
+    <text x="82" y="967" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#2d4854">L</text>
+    <text class="nav" x="124" y="967">Local User</text>
+
+    <rect x="386" y="36" width="1372" height="978" rx="18" fill="#282828"/>
+    <clipPath id="terminalClip">
+      <rect x="386" y="36" width="1372" height="978" rx="18"/>
+    </clipPath>
+    <g clip-path="url(#terminalClip)">
+      <rect x="386" y="36" width="1372" height="96" fill="#111819"/>
+      <path d="M386 132 H1758" stroke="#30383b" stroke-width="2"/>
+      <rect x="424" y="63" width="48" height="48" rx="8" fill="none" stroke="#4f8588" stroke-width="2"/>
+      <path d="M440 78 L454 87 L440 96" fill="none" stroke="#74dddf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M458 98 H468" stroke="#74dddf" stroke-width="4" stroke-linecap="round"/>
+      <text class="title" x="496" y="97">Codex Terminal Pro</text>
+      <rect x="790" y="65" width="118" height="40" rx="20" fill="#2d2920" stroke="#7a6135" stroke-width="2"/>
+      <text x="812" y="92" font-family="Courier New, Courier, monospace" font-size="23" font-weight="700" fill="#f0c36a">/config</text>
+      <rect x="1396" y="58" width="158" height="50" rx="8" fill="#1c2729" stroke="#344447" stroke-width="2"/>
+      <text x="1424" y="91" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#89959a">Voice Input</text>
+      <rect x="1568" y="58" width="164" height="50" rx="8" fill="#20343b" stroke="#47717e" stroke-width="2"/>
+      <text x="1592" y="91" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#f1f4f4">Upload Image</text>
+
+      <g class="terminal" transform="translate(424 170)">
+        <text x="0" y="0">
+          <tspan class="terminal-dim">L ... +8 lines</tspan>
+        </text>
+        <text x="0" y="34">
+          <tspan class="terminal-muted">  /config/safe_restore_kit_2026-05-16</tspan>
+        </text>
+
+        <text x="0" y="86">Updated Plan</text>
+        <text x="28" y="118">
+          <tspan class="terminal-muted">L Created a clean Home Assistant restore kit.</tspan>
+        </text>
+        <text x="48" y="150">
+          <tspan class="terminal-muted">[x] Create dated restore-kit directory</tspan>
+        </text>
+        <text x="48" y="182">
+          <tspan class="terminal-cyan">[ ] Capture YAML, dashboard, and automation snapshots read-only</tspan>
+        </text>
+        <text x="48" y="214">
+          <tspan class="terminal-muted">[ ] Write restore README and inventory manifest</tspan>
+        </text>
+        <text x="48" y="246">
+          <tspan class="terminal-muted">[ ] Verify kit contents before restart</tspan>
+        </text>
+
+        <text x="0" y="306">Running ha core check</text>
+        <text x="28" y="338">
+          <tspan class="terminal-green">  Processing Home Assistant configuration...</tspan>
+        </text>
+        <text x="28" y="370">
+          <tspan class="terminal-green">  Configuration check finished successfully.</tspan>
+        </text>
+
+        <text x="0" y="426">
+          <tspan class="terminal-yellow">! Automatic approval review approved (risk: low): read-only inspection of local config.</tspan>
+        </text>
+        <text x="0" y="482">ok Auto-reviewer approved codex to run ha core check this time</text>
+
+        <text x="0" y="538">
+          <tspan>Ran python3 - &lt;&lt;'PY'</tspan>
+        </text>
+        <text x="28" y="570">
+          <tspan class="terminal-green">from pathlib import Path</tspan>
+        </text>
+        <text x="28" y="602">
+          <tspan class="terminal-green">for path in Path('/config').glob('*.yaml'):</tspan>
+        </text>
+        <text x="28" y="650">
+          <tspan class="terminal-muted">/config/safe_restore_kit_2026-05-16/automation_snapshot.yaml</tspan>
+        </text>
+        <text x="28" y="682">
+          <tspan class="terminal-muted">/config/safe_restore_kit_2026-05-16/dashboard_snapshot.yaml</tspan>
+        </text>
+
+        <path d="M0 710 H1290" stroke="#696969" stroke-width="2"/>
+        <text x="0" y="752">The restore kit is saved. No credentials or device secrets were exported.</text>
+      </g>
+
+      <rect x="408" y="930" width="1328" height="44" fill="#282828"/>
+      <text class="terminal" x="424" y="958">
+        <tspan>&gt; Explain this config before making changes</tspan>
+      </text>
+      <text class="terminal-small" x="424" y="1002" fill="#d9a4ff">Working</text>
+      <text class="terminal-small" x="520" y="1002">- gpt-5.5 xhigh - </text>
+      <text class="terminal-small" x="724" y="1002" fill="#f0a56e">Context 28% left</text>
+      <text class="terminal-small" x="936" y="1002" fill="#98d59e">- /config</text>
+    </g>
+  </g>
+</svg>
