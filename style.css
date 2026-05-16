@@ -412,28 +412,229 @@ dd,
 }
 
 .calshot-object {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-content: center;
-  gap: 1px;
-  padding: 48px;
+  overflow: hidden;
+  min-height: 440px;
+  padding: 0;
+  background:
+    linear-gradient(135deg, rgba(199, 53, 47, 0.1), rgba(255, 255, 255, 0) 46%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(17, 17, 17, 0.035) 0 1px,
+      transparent 1px 68px
+    ),
+    var(--surface);
 }
 
-.calshot-object span {
-  display: grid;
-  min-height: 72px;
+.calshot-drop-strip,
+.calshot-review-card,
+.calshot-calendar-grid {
+  position: absolute;
+}
+
+.calshot-drop-strip {
+  top: 30px;
+  right: 38px;
+  left: 42px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px dashed rgba(199, 53, 47, 0.55);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.calshot-file-badge {
+  display: inline-grid;
+  width: 42px;
+  height: 34px;
+  flex: 0 0 auto;
   place-items: center;
+  border: 1px solid var(--line-dark);
+  background: var(--surface);
+  color: var(--calshot);
+  font-family: var(--font-din);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.calshot-drop-strip strong,
+.calshot-drop-strip small {
+  display: block;
+  line-height: 1.2;
+}
+
+.calshot-drop-strip strong {
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.calshot-drop-strip small {
+  margin-top: 0.1rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.calshot-calendar-grid {
+  right: 30px;
+  bottom: 28px;
+  left: 30px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.calshot-calendar-grid span,
+.calshot-calendar-grid i {
+  min-width: 0;
+  border-right: 1px solid var(--line);
+}
+
+.calshot-calendar-grid span:nth-child(5),
+.calshot-calendar-grid i:nth-of-type(5) {
+  border-right: 0;
+}
+
+.calshot-calendar-grid span {
+  padding: 0.55rem 0.5rem;
   color: var(--muted);
   font-family: var(--font-din);
-  font-size: 0.76rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.calshot-calendar-grid i {
+  position: relative;
+  min-height: 84px;
+  border-top: 1px solid var(--line);
+  font-style: normal;
+}
+
+.calshot-calendar-grid i::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  left: 12px;
+  height: 1px;
+  background: var(--line);
+}
+
+.calshot-calendar-grid .is-today::after {
+  content: "9:00 Talk";
+  position: absolute;
+  right: 8px;
+  bottom: 12px;
+  left: 8px;
+  padding: 0.38rem 0.45rem;
+  background: var(--calshot);
+  color: var(--surface);
+  font-family: var(--font-din);
+  font-size: 0.64rem;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.calshot-review-card {
+  top: 95px;
+  left: 50%;
+  z-index: 2;
+  width: min(420px, calc(100% - 72px));
+  padding: 1rem;
+  border: 1px solid var(--line-dark);
+  background: var(--surface);
+  box-shadow: 12px 12px 0 rgba(17, 17, 17, 0.08);
+  transform: translateX(-50%);
+}
+
+.calshot-card-topline,
+.calshot-field-grid,
+.calshot-card-actions {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.calshot-card-topline,
+.calshot-card-actions {
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.calshot-card-topline {
+  color: var(--calshot);
+  font-family: var(--font-din);
+  font-size: 0.68rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
-.calshot-object span:first-child {
+.calshot-review-card h3 {
+  margin: 0.65rem 0 0.85rem;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 520;
+  line-height: 1.08;
+}
+
+.calshot-field-grid {
+  grid-template-columns: minmax(62px, 0.36fr) minmax(0, 1fr);
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+}
+
+.calshot-field-grid span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.calshot-field-grid strong {
+  min-width: 0;
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 520;
+  overflow-wrap: anywhere;
+}
+
+.calshot-link-pill {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 0.85rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid rgba(0, 143, 90, 0.45);
+  color: var(--green);
+  font-size: 0.7rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.calshot-card-actions {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+.calshot-card-actions span {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.7rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.calshot-card-actions span:last-child {
   border-color: var(--calshot);
-  color: var(--calshot);
+  background: var(--calshot);
+  color: var(--surface);
 }
 
 .terminal-object {
@@ -683,6 +884,14 @@ dd,
   .object-panel {
     min-height: 240px;
   }
+
+  .calshot-object {
+    min-height: 440px;
+  }
+
+  .calshot-review-card {
+    top: 100px;
+  }
 }
 
 @media (max-width: 460px) {
@@ -709,5 +918,36 @@ dd,
 
   .pubmate-object span:nth-child(2) {
     border-right: 0;
+  }
+
+  .calshot-object {
+    min-height: 470px;
+  }
+
+  .calshot-drop-strip {
+    top: 28px;
+    right: 22px;
+    left: 30px;
+  }
+
+  .calshot-review-card {
+    top: 108px;
+    width: calc(100% - 40px);
+    padding: 0.85rem;
+  }
+
+  .calshot-calendar-grid {
+    right: 18px;
+    bottom: 18px;
+    left: 18px;
+  }
+
+  .calshot-calendar-grid span {
+    padding: 0.45rem 0.35rem;
+    font-size: 0.62rem;
+  }
+
+  .calshot-calendar-grid i {
+    min-height: 72px;
   }
 }
