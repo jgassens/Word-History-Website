@@ -35,11 +35,10 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html">Apps</a>
         <a href="downloads.html">Downloads</a>
-        <a href="word-history.html">Word History</a>
+        <a href="word-history.html">Office History</a>
         <a href="calshot.html" aria-current="page">CalShot</a>
         <a href="codex-terminal-pro.html">Codex Terminal Pro</a>
         <a href="pubmate.html">PubMate</a>
-        <a href="support.html">Support</a>
       </nav>
     </header>
 
@@ -119,14 +118,132 @@
         </div>
       </section>
 
+      <section class="product-detail calshot-signal" aria-labelledby="calshot-about">
+        <p class="index-number">About</p>
+        <div class="copy-stack">
+          <h2 id="calshot-about">CalShot turns event text into an editable calendar draft.</h2>
+          <p>
+            CalShot is a native macOS menu-bar app for getting events out of
+            images, selected text, and Outlook email drops. It uses local OCR
+            and date parsing, then stops at a review window so an event is never
+            created silently.
+          </p>
+        </div>
+        <ul class="detail-list">
+          <li>
+            <strong>Inputs</strong>
+            <span>Screenshots, image files, clipboard images, selected text, and dropped <code>.eml</code> files.</span>
+          </li>
+          <li>
+            <strong>Extracts</strong>
+            <span>Title, date, time, location, notes, and useful meeting links when they are present.</span>
+          </li>
+          <li>
+            <strong>Saves</strong>
+            <span>Writes to Apple Calendar when permission is available, with <code>.ics</code> export as a fallback.</span>
+          </li>
+          <li>
+            <strong>Boundary</strong>
+            <span>No cloud OCR, no LLM calls, no telemetry, and no silent event creation.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="product-screenshot calshot-signal" aria-labelledby="calshot-screen-title">
+        <div class="screenshot-copy">
+          <p class="index-number">Screen</p>
+          <h2 id="calshot-screen-title">Input, review, then save.</h2>
+          <p>
+            The main workflow is deliberately narrow: bring in event text,
+            inspect the parsed draft, fix anything wrong, then create the event.
+          </p>
+        </div>
+        <figure class="screenshot-frame">
+          <div class="object-panel calshot-object" role="img" aria-label="CalShot screen preview showing a dropped Outlook email, an event draft, calendar fields, and a create event action.">
+            <div class="calshot-drop-strip" aria-hidden="true">
+              <span class="calshot-file-badge">EML</span>
+              <span>
+                <strong>Seminar invite.eml</strong>
+                <small>Dropped from Outlook</small>
+              </span>
+            </div>
+            <div class="calshot-calendar-grid" aria-hidden="true">
+              <span>Mon</span>
+              <span>Tue</span>
+              <span>Wed</span>
+              <span>Thu</span>
+              <span>Fri</span>
+              <i></i>
+              <i></i>
+              <i class="is-today"></i>
+              <i></i>
+              <i></i>
+            </div>
+            <div class="calshot-review-card" aria-hidden="true">
+              <div class="calshot-card-topline">
+                <span>Event draft</span>
+                <span>92%</span>
+              </div>
+              <h3>Research seminar</h3>
+              <div class="calshot-field-grid">
+                <span>Date</span>
+                <strong>Wed, May 20</strong>
+                <span>Time</span>
+                <strong>9:00-10:30 AM</strong>
+                <span>Place</span>
+                <strong>Science building, Room 214</strong>
+                <span>Calendar</span>
+                <strong>Work</strong>
+              </div>
+              <div class="calshot-link-pill">Teams link detected</div>
+              <div class="calshot-card-actions">
+                <span>Edit</span>
+                <span>Create Event</span>
+              </div>
+            </div>
+          </div>
+          <figcaption class="screen-caption">
+            <strong>Shown</strong>
+            <span>Representative screen preview of the CalShot review flow, including the mandatory edit step before saving.</span>
+          </figcaption>
+        </figure>
+      </section>
+
       <section class="principles app-notes" aria-labelledby="calshot-notes">
-        <p class="index-number">Use</p>
+        <p class="index-number">How</p>
         <h2 id="calshot-notes">Review before save.</h2>
         <ol>
-          <li><span>Drop an image or email.</span></li>
-          <li><span>Check the parsed draft.</span></li>
-          <li><span>Create the event or export ICS.</span></li>
+          <li><span>Open CalShot from the menu bar.</span></li>
+          <li><span>Drop an image or Outlook email, paste a screenshot, or send selected text through the app workflow.</span></li>
+          <li><span>Check the parsed title, date, time, location, link, notes, and calendar destination.</span></li>
+          <li><span>Create the event in Apple Calendar, or export an <code>.ics</code> file if calendar permission is unavailable.</span></li>
         </ol>
+      </section>
+
+      <section class="support-section calshot-signal" aria-labelledby="calshot-support">
+        <p class="index-number">Support</p>
+        <div class="copy-stack">
+          <h2 id="calshot-support">Support is limited to the local parse-and-save path.</h2>
+          <p>
+            CalShot is early direct-distribution software. Useful reports are
+            concrete: what input was used, what the review window showed, and
+            what happened when saving.
+          </p>
+        </div>
+        <ul class="support-points">
+          <li>
+            <strong>Include</strong>
+            <span>macOS version, CalShot version, input type, and whether Calendar permission was granted.</span>
+          </li>
+          <li>
+            <strong>Check</strong>
+            <span>Whether the source text actually contains a date/time, whether the review fields are editable, and whether <code>.ics</code> export works.</span>
+          </li>
+          <li>
+            <strong>Private</strong>
+            <span>Sanitize event titles, locations, attendee names, and meeting links before sharing examples.</span>
+          </li>
+        </ul>
       </section>
     </main>
 

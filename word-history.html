@@ -3,31 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Word History | Ināt Apps</title>
+    <title>Office History | Ināt Apps</title>
     <meta
       name="description"
-      content="Word History keeps local snapshots of Microsoft Word AutoRecover files on macOS."
+      content="Office History keeps local snapshots of Microsoft Word, Excel, and PowerPoint AutoRecover files on macOS."
     >
     <link rel="canonical" href="https://jeremiahsrandom.website/word-history.html">
     <link rel="image_src" href="https://jeremiahsrandom.website/social-preview-linkedin.jpg">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Ināt Apps">
     <meta property="og:url" content="https://jeremiahsrandom.website/word-history.html">
-    <meta property="og:title" content="Word History">
-    <meta property="og:description" content="Local Word snapshots for macOS.">
+    <meta property="og:title" content="Office History">
+    <meta property="og:description" content="Local Office recovery snapshots for macOS.">
     <meta property="og:image" content="https://jeremiahsrandom.website/social-preview-linkedin.jpg">
     <meta property="og:image:url" content="https://jeremiahsrandom.website/social-preview-linkedin.jpg">
     <meta property="og:image:secure_url" content="https://jeremiahsrandom.website/social-preview-linkedin.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Word History: local Word snapshots for macOS.">
+    <meta property="og:image:alt" content="Office History: local Office recovery snapshots for macOS.">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Word History">
-    <meta name="twitter:description" content="Local Word snapshots for macOS.">
+    <meta name="twitter:title" content="Office History">
+    <meta name="twitter:description" content="Local Office recovery snapshots for macOS.">
     <meta name="twitter:image" content="https://jeremiahsrandom.website/social-preview-linkedin.jpg">
     <meta name="twitter:image:src" content="https://jeremiahsrandom.website/social-preview-linkedin.jpg">
-    <meta name="twitter:image:alt" content="Word History: local Word snapshots for macOS.">
+    <meta name="twitter:image:alt" content="Office History: local Office recovery snapshots for macOS.">
     <link rel="icon" href="assets/inat-logo.png" type="image/png">
     <link rel="preconnect" href="https://use.typekit.net">
     <link rel="preconnect" href="https://p.typekit.net">
@@ -43,19 +43,18 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html">Apps</a>
         <a href="downloads.html">Downloads</a>
-        <a href="word-history.html" aria-current="page">Word History</a>
+        <a href="word-history.html" aria-current="page">Office History</a>
         <a href="calshot.html">CalShot</a>
         <a href="codex-terminal-pro.html">Codex Terminal Pro</a>
         <a href="pubmate.html">PubMate</a>
-        <a href="support.html">Support</a>
       </nav>
     </header>
 
     <main>
       <section class="app-hero word-signal">
-        <p class="index-number">WH</p>
-        <h1>Word History</h1>
-        <p class="lead">Local snapshots for Microsoft Word.</p>
+        <p class="index-number">OH</p>
+        <h1>Office History</h1>
+        <p class="lead">Local history for Microsoft Office AutoRecover files.</p>
         <div class="action-line">
           <a href="assets/WordHistory.dmg">Download</a>
           <a href="downloads.html">Details</a>
@@ -63,15 +62,15 @@
         </div>
       </section>
 
-      <section class="spec-grid" aria-label="Word History specifications">
+      <section class="spec-grid" aria-label="Office History specifications">
         <dl>
           <div>
             <dt>System</dt>
-            <dd>macOS</dd>
+            <dd>macOS 14+</dd>
           </div>
           <div>
             <dt>Input</dt>
-            <dd>Word AutoRecover</dd>
+            <dd>Word, Excel, PowerPoint AutoRecover</dd>
           </div>
           <div>
             <dt>Storage</dt>
@@ -89,23 +88,116 @@
         </div>
       </section>
 
-      <section class="principles app-notes" aria-labelledby="word-notes">
-        <p class="index-number">Use</p>
-        <h2 id="word-notes">Keep the recovery folder visible.</h2>
+      <section class="product-detail word-signal" aria-labelledby="office-about">
+        <p class="index-number">About</p>
+        <div class="copy-stack">
+          <h2 id="office-about">Recovery files are useful. They are not a history system.</h2>
+          <p>
+            Office History watches Microsoft Office AutoRecover artifacts and
+            stores changed versions as local snapshots. It is meant for the
+            moment when the current recovery file has moved on, but an older
+            version is the one you need.
+          </p>
+        </div>
+        <ul class="detail-list">
+          <li>
+            <strong>Captures</strong>
+            <span>Word, Excel, and PowerPoint recovery artifacts when they change.</span>
+          </li>
+          <li>
+            <strong>Groups</strong>
+            <span>Related snapshots into document histories instead of one loose folder.</span>
+          </li>
+          <li>
+            <strong>Restores</strong>
+            <span>Exports a standalone copy or hands a stored recovery file back to the matching Office app.</span>
+          </li>
+          <li>
+            <strong>Boundary</strong>
+            <span>It is local recovery history, not cloud backup, sync, or collaboration software.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="product-screenshot word-signal" aria-labelledby="office-screen-title">
+        <div class="screenshot-copy">
+          <p class="index-number">Screen</p>
+          <h2 id="office-screen-title">Monitoring status and snapshot history.</h2>
+          <p>
+            The app surface is built around folder access, Office app status,
+            and the document snapshots available for restore.
+          </p>
+        </div>
+        <figure class="screenshot-frame">
+          <div class="object-panel office-screen" role="img" aria-label="Office History screen preview showing Word, Excel, and PowerPoint monitoring rows and three captured snapshots.">
+            <div class="office-window">
+              <div class="office-window-header">
+                <span>Monitoring Status</span>
+                <span>Local</span>
+              </div>
+              <ul class="office-status-list">
+                <li><strong>Word</strong><span></span><b>Watching</b></li>
+                <li><strong>Excel</strong><span></span><b>Detected</b></li>
+                <li><strong>PowerPoint</strong><span></span><b>Detected</b></li>
+              </ul>
+              <ul class="office-timeline">
+                <li><strong>09:12</strong>Draft recovered</li>
+                <li><strong>09:27</strong>Table changed</li>
+                <li><strong>09:41</strong>Restore as copy</li>
+              </ul>
+            </div>
+          </div>
+          <figcaption class="screen-caption">
+            <strong>Shown</strong>
+            <span>Representative screen preview based on the current Office History monitoring and restore workflow.</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="principles app-notes" aria-labelledby="office-notes">
+        <p class="index-number">How</p>
+        <h2 id="office-notes">Use a folder you control.</h2>
         <ol>
-          <li><span>Choose a folder you control.</span></li>
-          <li><span>Point Word and Word History there.</span></li>
-          <li><span>Restore a copy when needed.</span></li>
+          <li><span>Create a Word AutoRecover folder, usually <code>~/Documents/WordAutorecovery</code>.</span></li>
+          <li><span>Point Microsoft Word to that folder and keep AutoRecover enabled.</span></li>
+          <li><span>Add the same folder in Office History, then confirm the detected Excel and PowerPoint recovery locations.</span></li>
+          <li><span>Use the history view to preview a snapshot, restore a copy, or recover through the matching Office app.</span></li>
         </ol>
+      </section>
+
+      <section class="support-section word-signal" aria-labelledby="office-support">
+        <p class="index-number">Support</p>
+        <div class="copy-stack">
+          <h2 id="office-support">Support is practical and document-safe.</h2>
+          <p>
+            For troubleshooting, start with folder access, monitoring status,
+            and Office version details. Do not send private documents or raw
+            recovery files unless you have reviewed and redacted them.
+          </p>
+        </div>
+        <ul class="support-points">
+          <li>
+            <strong>Include</strong>
+            <span>macOS version, Office version, Office History version, monitored folder path, and the monitoring status shown in the app.</span>
+          </li>
+          <li>
+            <strong>Check</strong>
+            <span>Folder permission prompts, AutoRecover settings, and whether Office has created a recovery artifact at least once.</span>
+          </li>
+          <li>
+            <strong>Private</strong>
+            <span>Avoid attaching documents, full filenames, or logs to public issues.</span>
+          </li>
+        </ul>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>Word History</span>
+      <span>Office History</span>
       <nav aria-label="Footer navigation">
         <a href="index.html">Apps</a>
         <a href="downloads.html">Downloads</a>
-        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
       </nav>
     </footer>
   </body>

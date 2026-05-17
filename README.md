@@ -1,8 +1,8 @@
-# Word History Website
+# Ināt Apps Website
 
-Static marketing, privacy, support, and download pages for the Ināt published
-apps landing site. The home page links out to Word History, Codex Terminal Pro,
-CalShot, and PubMate, with macOS DMG downloads hosted here where available.
+Static marketing, privacy, and download pages for the Ināt published apps
+landing site. The home page links out to Office History, CalShot, Codex Terminal
+Pro, and PubMate, with macOS DMG downloads hosted here where available.
 
 ## Cloudflare Pages
 

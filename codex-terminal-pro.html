@@ -39,11 +39,10 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html">Apps</a>
         <a href="downloads.html">Downloads</a>
-        <a href="word-history.html">Word History</a>
+        <a href="word-history.html">Office History</a>
         <a href="calshot.html">CalShot</a>
         <a href="codex-terminal-pro.html" aria-current="page">Codex Terminal Pro</a>
         <a href="pubmate.html">PubMate</a>
-        <a href="support.html">Support</a>
       </nav>
     </header>
 
@@ -86,6 +85,37 @@
         </div>
       </section>
 
+      <section class="product-detail codex-signal" aria-labelledby="codex-about">
+        <p class="index-number">About</p>
+        <div class="copy-stack">
+          <h2 id="codex-about">A Home Assistant add-on for running Codex where the configuration lives.</h2>
+          <p>
+            Codex Terminal Pro is an unofficial Home Assistant add-on. It opens
+            a browser terminal through Home Assistant ingress, starts in
+            <code>/config</code>, and keeps the Codex session alive in
+            <code>tmux</code> when the browser disconnects.
+          </p>
+        </div>
+        <ul class="detail-list">
+          <li>
+            <strong>Includes</strong>
+            <span>Codex CLI, Home Assistant CLI, GitHub CLI, image paste/upload support, and persistent add-on state under <code>/data</code>.</span>
+          </li>
+          <li>
+            <strong>Session</strong>
+            <span>Uses a named <code>tmux</code> session so reconnecting the panel does not kill the active Codex run.</span>
+          </li>
+          <li>
+            <strong>Tools</strong>
+            <span>Ships read-only Modbus helpers for inspection workflows; write-register helpers are intentionally not bundled.</span>
+          </li>
+          <li>
+            <strong>Boundary</strong>
+            <span>It is not an official OpenAI add-on, and the terminal has administrator-level Home Assistant access.</span>
+          </li>
+        </ul>
+      </section>
+
       <section class="product-screenshot codex-signal" aria-labelledby="codex-screenshot-title">
         <div class="screenshot-copy">
           <p class="index-number">Screen</p>
@@ -107,13 +137,40 @@
       </section>
 
       <section class="principles app-notes" aria-labelledby="codex-notes">
-        <p class="index-number">Use</p>
+        <p class="index-number">How</p>
         <h2 id="codex-notes">Admin terminal. Treat it that way.</h2>
         <ol>
-          <li><span>Back up first.</span></li>
-          <li><span>Inspect before edits.</span></li>
-          <li><span>Run checks before restart.</span></li>
+          <li><span>Add the GitHub repository to Home Assistant, install the add-on, start it, and open the sidebar panel.</span></li>
+          <li><span>Run <code>codex-auth-helper</code> for device-code login when the add-on needs Codex authentication.</span></li>
+          <li><span>Ask Codex to inspect first, then show a diff before changing Home Assistant configuration.</span></li>
+          <li><span>Run <code>ha core check</code> before reloads or restarts.</span></li>
         </ol>
+      </section>
+
+      <section class="support-section codex-signal" aria-labelledby="codex-support">
+        <p class="index-number">Support</p>
+        <div class="copy-stack">
+          <h2 id="codex-support">Support starts with install state and redacted logs.</h2>
+          <p>
+            Codex Terminal Pro can inspect and change a live Home Assistant
+            system, so useful support reports should be careful, specific, and
+            redacted.
+          </p>
+        </div>
+        <ul class="support-points">
+          <li>
+            <strong>Include</strong>
+            <span>Add-on version, Home Assistant Core and Supervisor versions, architecture, install source, and the relevant redacted add-on log lines.</span>
+          </li>
+          <li>
+            <strong>Check</strong>
+            <span>Whether the add-on was installed from the GitHub repository, whether the store was reloaded, and whether the terminal starts in <code>/config</code>.</span>
+          </li>
+          <li>
+            <strong>Private</strong>
+            <span>Do not paste tokens, <code>auth.json</code>, secrets, full configuration files, or unredacted terminal transcripts into public issues.</span>
+          </li>
+        </ul>
       </section>
     </main>
 

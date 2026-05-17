@@ -35,11 +35,10 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html">Apps</a>
         <a href="downloads.html">Downloads</a>
-        <a href="word-history.html">Word History</a>
+        <a href="word-history.html">Office History</a>
         <a href="calshot.html">CalShot</a>
         <a href="codex-terminal-pro.html">Codex Terminal Pro</a>
         <a href="pubmate.html" aria-current="page">PubMate</a>
-        <a href="support.html">Support</a>
       </nav>
     </header>
 
@@ -82,14 +81,114 @@
         </div>
       </section>
 
+      <section class="product-detail pubmate-signal" aria-labelledby="pubmate-about">
+        <p class="index-number">About</p>
+        <div class="copy-stack">
+          <h2 id="pubmate-about">PubMate bridges draft placeholders and EndNote records.</h2>
+          <p>
+            PubMate scans a Word <code>.docx</code> for clearly labeled PMID
+            and DOI markers, fetches matching records, and writes the files
+            EndNote needs to convert temporary citations into formatted
+            references.
+          </p>
+        </div>
+        <ul class="detail-list">
+          <li>
+            <strong>Reads</strong>
+            <span>Explicit PMID markers, DOI labels, DOI resolver URLs, and Word comments when enabled.</span>
+          </li>
+          <li>
+            <strong>Writes</strong>
+            <span>A separate <code>.endnote.docx</code>, canonical <code>.endnote-import.enw</code>, optional <code>.references.nbib</code>, and JSON report.</span>
+          </li>
+          <li>
+            <strong>Protects</strong>
+            <span>The input document is not modified; PubMate writes a new output document.</span>
+          </li>
+          <li>
+            <strong>Boundary</strong>
+            <span>It is for Clarivate EndNote temporary citations, not Microsoft Word endnotes or hand-written CWYW fields.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="product-screenshot pubmate-signal" aria-labelledby="pubmate-screen-title">
+        <div class="screenshot-copy">
+          <p class="index-number">Screen</p>
+          <h2 id="pubmate-screen-title">Identifiers in. EndNote handoff out.</h2>
+          <p>
+            PubMate keeps the manuscript workflow explicit: labeled identifiers
+            become import records and temporary citations that EndNote can
+            resolve.
+          </p>
+        </div>
+        <figure class="screenshot-frame">
+          <div class="object-panel pubmate-screen" role="img" aria-label="PubMate screen preview showing a Word document with PMID and DOI markers, conversion stages, and generated output files.">
+            <div class="pubmate-window">
+              <div class="pubmate-window-header">
+                <span>Manuscript scan</span>
+                <span>Report ready</span>
+              </div>
+              <ul class="pubmate-doc">
+                <li>... vaccine scaffold <mark>PMID: 6416259</mark></li>
+                <li>... porous framework <mark>DOI: 10.1021/acs.joc.0c00770</mark></li>
+                <li>References section detected and skipped</li>
+              </ul>
+              <div class="pubmate-flow" aria-hidden="true">
+                <span>DOCX</span>
+                <span>PMID/DOI</span>
+                <span>ENW</span>
+                <span>EndNote</span>
+              </div>
+              <ul class="pubmate-output-list">
+                <li><strong>Output</strong> manuscript.endnote.docx</li>
+                <li><strong>Import</strong> manuscript.endnote-import.enw</li>
+                <li><strong>Report</strong> manuscript.pmid2endnote.report.json</li>
+              </ul>
+            </div>
+          </div>
+          <figcaption class="screen-caption">
+            <strong>Shown</strong>
+            <span>Representative screen preview of the PubMate conversion path and generated handoff files.</span>
+          </figcaption>
+        </figure>
+      </section>
+
       <section class="principles app-notes" aria-labelledby="pubmate-notes">
-        <p class="index-number">Use</p>
+        <p class="index-number">How</p>
         <h2 id="pubmate-notes">Temporary citations. Real records.</h2>
         <ol>
-          <li><span>Scan labeled identifiers.</span></li>
-          <li><span>Import the ENW file.</span></li>
-          <li><span>Update in Word with EndNote.</span></li>
+          <li><span>Use explicit markers such as <code>PMID: 12345678</code> or <code>DOI: 10.xxxx/xxxxx</code> in the manuscript draft.</span></li>
+          <li><span>Run PubMate on the Word <code>.docx</code>; provide an email address for NCBI requests when prompted.</span></li>
+          <li><span>Import the generated <code>.endnote-import.enw</code> file into the target EndNote library.</span></li>
+          <li><span>Open the generated <code>.endnote.docx</code> in Word and run EndNote's update command.</span></li>
         </ol>
+      </section>
+
+      <section class="support-section pubmate-signal" aria-labelledby="pubmate-support">
+        <p class="index-number">Support</p>
+        <div class="copy-stack">
+          <h2 id="pubmate-support">Support starts with the report file.</h2>
+          <p>
+            PubMate writes a JSON report so failures can be diagnosed without
+            sharing a whole manuscript. Start there, then reduce the document to
+            the smallest redacted example that still reproduces the issue.
+          </p>
+        </div>
+        <ul class="support-points">
+          <li>
+            <strong>Include</strong>
+            <span>PubMate version, macOS version, EndNote version, marker examples, and relevant report warnings or errors.</span>
+          </li>
+          <li>
+            <strong>Check</strong>
+            <span>That identifiers are labeled, the reference section was skipped intentionally, and the <code>.enw</code> file was imported into the open EndNote library.</span>
+          </li>
+          <li>
+            <strong>Private</strong>
+            <span>Do not share an unpublished manuscript; use a redacted document with the smallest failing marker set.</span>
+          </li>
+        </ul>
       </section>
     </main>
 
