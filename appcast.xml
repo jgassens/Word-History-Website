@@ -1,7 +1,18 @@
 <?xml version="1.0" standalone="yes"?>
 <rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
-        <title>Word History</title>
+        <title>Office History</title>
+        <item>
+            <title>2.0</title>
+            <pubDate>Sun, 17 May 2026 11:03:55 -0500</pubDate>
+            <sparkle:version>9</sparkle:version>
+            <sparkle:shortVersionString>2.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://word-history-website.pages.dev/assets/OfficeHistory.dmg" length="9505024" type="application/octet-stream" sparkle:edSignature="7VdFZD6G24FzO1lmMTufM5w6k8Xig9tqDDns19PbUYL9A7I8YB3VEOTARJcUW8S1pKpD0NqpBxDAzDHcl26ZCg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://word-history-website.pages.dev/assets/Office%20History9-8.delta" sparkle:deltaFrom="8" length="1219338" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="QCoJ2knNv2/IowTUihesF6nL6fRo4+DkGQ01/o5JrL5N7KS7GwpJ0bv20Ppo+N5cBcymSvaB3xzaxjs0fWcYCA=="/>
+            </sparkle:deltas>
+        </item>
         <item>
             <title>1.8</title>
             <pubDate>Wed, 13 May 2026 11:41:00 -0500</pubDate>
