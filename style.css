@@ -16,19 +16,21 @@
   --codex: #008f5a;
   --pubmate: #d47a00;
   --radius: 4px;
-  --font-din:
-    "DIN 2014",
-    "DIN Alternate",
-    "DIN Condensed",
-    "FF DIN",
-    "DIN",
-    "Bahnschrift",
-    "Aptos",
-    "Arial Narrow",
+  --font-display:
+    "dunbar-low",
+    "Futura",
+    "Avenir Next",
     "Helvetica Neue",
     Arial,
     sans-serif;
-  font-family: var(--font-din);
+  --font-text:
+    "dunbar-text",
+    "Avenir Next",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  --font-ui: var(--font-text);
+  font-family: var(--font-text);
 }
 
 * {
@@ -45,6 +47,7 @@ body {
   margin: 0;
   color: var(--ink);
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.55;
   letter-spacing: 0;
 }
@@ -58,7 +61,7 @@ code {
   border: 1px solid var(--line);
   border-radius: 2px;
   background: var(--surface);
-  font-family: var(--font-din);
+  font-family: var(--font-ui);
   font-size: 0.9em;
 }
 
@@ -104,7 +107,7 @@ main {
 .action-line a,
 .product-action {
   color: var(--muted);
-  font-family: var(--font-din);
+  font-family: var(--font-ui);
   font-size: 0.76rem;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -136,8 +139,9 @@ main {
   border: 1px solid var(--blue);
   background: var(--blue);
   color: var(--surface);
-  font-family: var(--font-din);
+  font-family: var(--font-display);
   font-size: 0.72rem;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -165,7 +169,7 @@ main {
 .eyebrow {
   margin: 0;
   color: var(--muted);
-  font-family: var(--font-din);
+  font-family: var(--font-ui);
   font-size: 0.76rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -181,7 +185,7 @@ p {
 h1 {
   max-width: 900px;
   margin-bottom: 0;
-  font-family: var(--font-din);
+  font-family: var(--font-display);
   font-size: clamp(3.4rem, 6.8vw, 5.8rem);
   font-weight: 400;
   line-height: 1.02;
@@ -195,7 +199,8 @@ h1 {
 h2 {
   margin-bottom: 0;
   font-size: clamp(1.8rem, 4vw, 3.3rem);
-  font-weight: 520;
+  font-family: var(--font-display);
+  font-weight: 400;
   line-height: 1;
   letter-spacing: 0;
 }
@@ -272,7 +277,7 @@ h3 {
 .product-kind,
 dt {
   color: var(--muted);
-  font-family: var(--font-din);
+  font-family: var(--font-ui);
   font-size: 0.74rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -283,9 +288,9 @@ dt {
 }
 
 .product-name {
-  font-family: var(--font-din);
+  font-family: var(--font-ui);
   font-size: clamp(1.05rem, 2vw, 1.45rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.1;
 }
 
@@ -323,7 +328,7 @@ dd,
 .principles li::before {
   content: counter(principle, decimal-leading-zero);
   color: var(--muted);
-  font-family: var(--font-din);
+  font-family: var(--font-ui);
   font-size: 0.74rem;
 }
 
@@ -453,7 +458,7 @@ dd,
   border: 1px solid var(--line-dark);
   background: var(--surface);
   color: var(--calshot);
-  font-family: var(--font-din);
+  font-family: var(--font-ui);
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -501,7 +506,7 @@ dd,
 .calshot-calendar-grid span {
   padding: 0.55rem 0.5rem;
   color: var(--muted);
-  font-family: var(--font-din);
+  font-family: var(--font-ui);
   font-size: 0.68rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -533,7 +538,7 @@ dd,
   padding: 0.38rem 0.45rem;
   background: var(--calshot);
   color: var(--surface);
-  font-family: var(--font-din);
+  font-family: var(--font-ui);
   font-size: 0.64rem;
   line-height: 1;
   text-align: center;
@@ -567,7 +572,7 @@ dd,
 
 .calshot-card-topline {
   color: var(--calshot);
-  font-family: var(--font-din);
+  font-family: var(--font-ui);
   font-size: 0.68rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -644,7 +649,7 @@ dd,
   padding: 48px;
   background: #171717;
   color: #f2f2f0;
-  font-family: var(--font-din);
+  font-family: var(--font-ui);
   font-size: 0.9rem;
 }
 
@@ -675,7 +680,7 @@ dd,
   place-items: center;
   border-right: 1px solid var(--line);
   color: var(--ink);
-  font-family: var(--font-din);
+  font-family: var(--font-ui);
   font-size: 0.78rem;
 }
 
@@ -822,7 +827,8 @@ dd,
 .download-card h2,
 .status-band h2 {
   font-size: clamp(1.7rem, 3vw, 2.6rem);
-  font-weight: 520;
+  font-family: var(--font-ui);
+  font-weight: 700;
 }
 
 .button {
@@ -835,7 +841,7 @@ dd,
   border-radius: 0;
   background: transparent;
   color: var(--ink);
-  font-family: var(--font-din);
+  font-family: var(--font-ui);
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.02em;
