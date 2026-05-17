@@ -820,6 +820,10 @@ dd,
   --signal: var(--calshot);
 }
 
+.download-card.codex-signal {
+  --signal: var(--codex);
+}
+
 .download-card.pubmate-signal {
   --signal: var(--pubmate);
 }
