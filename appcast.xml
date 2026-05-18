@@ -3,14 +3,14 @@
     <channel>
         <title>Office History</title>
         <item>
-            <title>2.0.1</title>
-            <pubDate>Sun, 17 May 2026 12:53:38 -0500</pubDate>
-            <sparkle:version>10</sparkle:version>
-            <sparkle:shortVersionString>2.0.1</sparkle:shortVersionString>
+            <title>2.0.2</title>
+            <pubDate>Sun, 17 May 2026 11:03:55 -0500</pubDate>
+            <sparkle:version>11</sparkle:version>
+            <sparkle:shortVersionString>2.0.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://word-history-website.pages.dev/assets/OfficeHistory.dmg" length="9501708" type="application/octet-stream" sparkle:edSignature="Imn/DI0o4S837gGXbdK5c5yKXuNlOlMqKDn/+OIIY0JCWKqQmI9GXBEZ5LTQ5lj1wRUjO9DxhMCSeys5+wZpAA=="/>
+            <enclosure url="https://word-history-website.pages.dev/assets/OfficeHistory.dmg" length="9506513" type="application/octet-stream" sparkle:edSignature="Rxfwl5vASpFjiIh2r2UDwpRWaIjhveEjnlQ1NXChYtunTqAhUcGS1c0O3m2awLapyXbC+Uxj+Aq5/juif1iECw=="/>
             <sparkle:deltas>
-                <enclosure url="https://word-history-website.pages.dev/assets/Office%20History10-8.delta" sparkle:deltaFrom="8" length="1236278" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ggQ8kpPtd+XyY/6+3jE44SuvWXFrCuPaoYOiGcQMDyUVTfq4BBasHM/MrSYP/XNRODmJGkt3Pq3n8+zhhcw/DA=="/>
+                <enclosure url="https://word-history-website.pages.dev/assets/Office%20History11-8.delta" sparkle:deltaFrom="8" length="1244610" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="jnCOJxqcPDXvFmjQSmWBZywWqIzC7Um+LwZQdpxrAzpTdZBtTIP3BVd7AXBCHl4JbCpTGS57qmeg6XIOKt+NAA=="/>
             </sparkle:deltas>
         </item>
         <item>
