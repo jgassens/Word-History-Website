@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>UTD QR Generator | Ināt Apps</title>
+    <meta
+      name="description"
+      content="A private UTD-themed QR code generator that exports high-resolution PNG files."
+    >
+    <link rel="canonical" href="https://jeremiahsrandom.website/utd-qr-generator">
+    <link rel="icon" href="assets/inat-logo.png" type="image/png">
+    <link rel="preconnect" href="https://use.typekit.net">
+    <link rel="preconnect" href="https://p.typekit.net">
+    <link rel="stylesheet" href="https://use.typekit.net/yrs0uxx.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="assets/qrcodegen-v1.8.0-es6.js"></script>
+    <script defer src="assets/utd-qr-generator.js"></script>
+  </head>
+  <body class="utd-qr-page">
+    <header class="site-header utd-qr-header">
+      <a class="brand" href="index.html" aria-label="Ināt Apps home">
+        <span class="brand-mark">I</span>
+        <span class="brand-name">Ināt Apps</span>
+      </a>
+      <span class="utd-private-label">Hidden utility</span>
+    </header>
+
+    <main class="utd-tool-main">
+      <section class="utd-tool-shell" aria-labelledby="utd-qr-title">
+        <div class="utd-tool-copy">
+          <p class="index-number">UTD</p>
+          <h1 id="utd-qr-title">QR Generator</h1>
+          <p class="lead">
+            Paste a destination URL and export a high-resolution PNG in UT Dallas orange and green.
+          </p>
+
+          <form class="utd-qr-controls" id="utd-qr-form">
+            <label class="utd-field">
+              <span>Destination URL</span>
+              <input
+                id="utd-url-input"
+                name="url"
+                type="text"
+                inputmode="url"
+                autocomplete="url"
+                spellcheck="false"
+                value="https://www.utdallas.edu/"
+                placeholder="https://example.com"
+                required
+              >
+            </label>
+
+            <div class="utd-control-grid">
+              <label class="utd-field">
+                <span>PNG size</span>
+                <select id="utd-size-select" name="size">
+                  <option value="1024">1024 px</option>
+                  <option value="2048" selected>2048 px</option>
+                  <option value="3072">3072 px</option>
+                  <option value="4096">4096 px</option>
+                </select>
+              </label>
+
+              <label class="utd-field">
+                <span>Center mark</span>
+                <select id="utd-badge-select" name="badge">
+                  <option value="0.15">Small</option>
+                  <option value="0.18" selected>Standard</option>
+                  <option value="0.21">Large</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="utd-button-row">
+              <button class="utd-button primary" type="submit">Generate</button>
+              <button class="utd-button" id="utd-download-button" type="button">Download PNG</button>
+            </div>
+
+            <p class="utd-status" id="utd-status" role="status" aria-live="polite">
+              High error correction is used so the centered mark stays scan-friendly.
+            </p>
+          </form>
+        </div>
+
+        <div class="utd-preview-panel" aria-label="QR code preview">
+          <div class="utd-preview-head">
+            <span>Preview</span>
+            <span id="utd-qr-meta">Waiting for URL</span>
+          </div>
+          <div class="utd-canvas-wrap">
+            <canvas id="utd-qr-canvas" width="1024" height="1024" aria-label="Generated UTD-themed QR code"></canvas>
+          </div>
+          <div class="utd-swatch-row" aria-label="UT Dallas colors used">
+            <span><i class="orange"></i>Orange #e87500</span>
+            <span><i class="green"></i>Green #154734</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer utd-tool-footer">
+      <span>Ināt</span>
+      <nav aria-label="Asset credits">
+        <a href="https://brand.utdallas.edu/graphics-visual-identity/color-palette/">UTD colors</a>
+        <a href="https://commons.wikimedia.org/wiki/File:UT_Dallas_2_Color_Emblem_-_SVG_Brand_Identity_File.svg">Emblem source</a>
+      </nav>
+    </footer>
+  </body>
+</html>
