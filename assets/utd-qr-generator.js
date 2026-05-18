@@ -15,7 +15,8 @@
 
   const logo = new Image();
   logo.decoding = "async";
-  logo.src = "assets/utd-emblem.svg";
+  const scriptUrl = document.currentScript ? document.currentScript.src : "assets/utd-qr-generator.js";
+  logo.src = new URL("utd-emblem.svg", scriptUrl).href;
 
   let renderToken = 0;
   let currentUrl = "";
