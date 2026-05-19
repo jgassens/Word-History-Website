@@ -1233,7 +1233,12 @@ dd,
   border-color: var(--red);
 }
 
-.utd-control-grid,
+.utd-control-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.8rem;
+}
+
 .utd-button-row {
   display: grid;
   grid-template-columns: 1fr 1fr;

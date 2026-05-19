@@ -8,24 +8,35 @@
   const urlInput = document.querySelector("#utd-url-input");
   const sizeSelect = document.querySelector("#utd-size-select");
   const badgeSelect = document.querySelector("#utd-badge-select");
+  const markSelect = document.querySelector("#utd-mark-select");
   const downloadButton = document.querySelector("#utd-download-button");
   const statusText = document.querySelector("#utd-status");
   const metaText = document.querySelector("#utd-qr-meta");
   const previewCanvas = document.querySelector("#utd-qr-canvas");
 
-  const logo = new Image();
-  logo.decoding = "async";
   const scriptUrl = document.currentScript ? document.currentScript.src : "assets/utd-qr-generator.js";
-  logo.src = new URL("utd-emblem.svg", scriptUrl).href;
+
+  function createCenterMark(source, fallbackText) {
+    const image = new Image();
+    image.decoding = "async";
+    image.src = new URL(source, scriptUrl).href;
+
+    const ready = new Promise((resolve) => {
+      image.addEventListener("load", () => resolve(true), { once: true });
+      image.addEventListener("error", () => resolve(false), { once: true });
+    });
+
+    return { fallbackText, image, ready };
+  }
+
+  const centerMarks = {
+    emblem: createCenterMark("utd-emblem.svg", "UTD"),
+    temoc: createCenterMark("temoc-secondary-2.svg", "Temoc"),
+  };
 
   let renderToken = 0;
   let currentUrl = "";
   let currentQr = null;
-
-  const logoReady = new Promise((resolve) => {
-    logo.addEventListener("load", () => resolve(true), { once: true });
-    logo.addEventListener("error", () => resolve(false), { once: true });
-  });
 
   function normalizeUrl(rawValue) {
     const trimmed = rawValue.trim();
@@ -84,25 +95,32 @@
     fillRoundedRect(ctx, x + moduleSize * 2, y + moduleSize * 2, inner, inner, innerRadius, UTD_ORANGE);
   }
 
-  function drawCenterLogo(ctx, size, logoRatio, hasLogo) {
-    const logoSize = Math.round(size * logoRatio);
-    const logoX = Math.round((size - logoSize) / 2);
-    const logoY = logoX;
+  function drawCenterLogo(ctx, size, logoRatio, mark, hasLogo) {
+    const logoBox = Math.round(size * logoRatio);
 
     if (!hasLogo) {
       ctx.fillStyle = UTD_ORANGE;
-      ctx.font = `700 ${Math.round(logoSize * 0.28)}px Arial, sans-serif`;
+      ctx.font = `700 ${Math.round(logoBox * 0.28)}px Arial, sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      ctx.fillText("UTD", size / 2, size / 2);
+      ctx.fillText(mark.fallbackText, size / 2, size / 2);
       return;
     }
 
-    ctx.drawImage(logo, logoX, logoY, logoSize, logoSize);
+    const naturalWidth = mark.image.naturalWidth || mark.image.width || 1;
+    const naturalHeight = mark.image.naturalHeight || mark.image.height || 1;
+    const aspectRatio = naturalWidth / naturalHeight;
+    const drawWidth = aspectRatio >= 1 ? logoBox : Math.round(logoBox * aspectRatio);
+    const drawHeight = aspectRatio >= 1 ? Math.round(logoBox / aspectRatio) : logoBox;
+    const logoX = Math.round((size - drawWidth) / 2);
+    const logoY = Math.round((size - drawHeight) / 2);
+
+    ctx.drawImage(mark.image, logoX, logoY, drawWidth, drawHeight);
   }
 
-  async function drawBrandedQr(canvas, value, outputSize, badgeRatio) {
-    const hasLogo = await logoReady;
+  async function drawBrandedQr(canvas, value, outputSize, badgeRatio, markKey) {
+    const mark = centerMarks[markKey] || centerMarks.emblem;
+    const hasLogo = await mark.ready;
     const qr = qrcodegen.QrCode.encodeText(value, qrcodegen.QrCode.Ecc.HIGH);
     const quietModules = 4;
     const totalModules = qr.size + quietModules * 2;
@@ -142,7 +160,7 @@
     drawFinder(ctx, origin, origin, moduleSize);
     drawFinder(ctx, origin + (qr.size - 7) * moduleSize, origin, moduleSize);
     drawFinder(ctx, origin, origin + (qr.size - 7) * moduleSize, moduleSize);
-    drawCenterLogo(ctx, outputSize, badgeRatio, hasLogo);
+    drawCenterLogo(ctx, outputSize, badgeRatio, mark, hasLogo);
 
     ctx.lineWidth = Math.max(1, Math.round(outputSize * 0.002));
     ctx.strokeStyle = LINE;
@@ -155,10 +173,11 @@
     const token = ++renderToken;
     const outputSize = Number(sizeSelect.value);
     const badgeRatio = Number(badgeSelect.value);
+    const markKey = markSelect ? markSelect.value : "emblem";
 
     try {
       currentUrl = normalizeUrl(urlInput.value);
-      const qr = await drawBrandedQr(previewCanvas, currentUrl, 1024, badgeRatio);
+      const qr = await drawBrandedQr(previewCanvas, currentUrl, 1024, badgeRatio, markKey);
       if (token !== renderToken) {
         return;
       }
@@ -205,8 +224,9 @@
 
     const outputSize = Number(sizeSelect.value);
     const badgeRatio = Number(badgeSelect.value);
+    const markKey = markSelect ? markSelect.value : "emblem";
     const exportCanvas = document.createElement("canvas");
-    await drawBrandedQr(exportCanvas, currentUrl, outputSize, badgeRatio);
+    await drawBrandedQr(exportCanvas, currentUrl, outputSize, badgeRatio, markKey);
     exportCanvas.toBlob((blob) => {
       if (!blob) {
         statusText.textContent = "Could not create PNG.";
@@ -238,6 +258,9 @@
   urlInput.addEventListener("input", queuePreview);
   sizeSelect.addEventListener("change", renderPreview);
   badgeSelect.addEventListener("change", renderPreview);
+  if (markSelect) {
+    markSelect.addEventListener("change", renderPreview);
+  }
   downloadButton.addEventListener("click", downloadPng);
 
   renderPreview();
