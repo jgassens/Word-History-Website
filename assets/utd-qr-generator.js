@@ -84,36 +84,20 @@
     fillRoundedRect(ctx, x + moduleSize * 2, y + moduleSize * 2, inner, inner, innerRadius, UTD_ORANGE);
   }
 
-  function drawLogoBadge(ctx, size, badgeRatio, hasLogo) {
-    const badgeSize = Math.round(size * badgeRatio);
-    const x = Math.round((size - badgeSize) / 2);
-    const y = x;
-    const radius = Math.round(badgeSize * 0.16);
-
-    ctx.save();
-    ctx.shadowColor = "rgba(21, 71, 52, 0.18)";
-    ctx.shadowBlur = Math.max(10, Math.round(size * 0.018));
-    ctx.shadowOffsetY = Math.max(3, Math.round(size * 0.005));
-    fillRoundedRect(ctx, x, y, badgeSize, badgeSize, radius, WHITE);
-    ctx.restore();
-
-    ctx.lineWidth = Math.max(2, Math.round(size * 0.002));
-    ctx.strokeStyle = "rgba(21, 71, 52, 0.2)";
-    roundedRect(ctx, x, y, badgeSize, badgeSize, radius);
-    ctx.stroke();
+  function drawCenterLogo(ctx, size, logoRatio, hasLogo) {
+    const logoSize = Math.round(size * logoRatio);
+    const logoX = Math.round((size - logoSize) / 2);
+    const logoY = logoX;
 
     if (!hasLogo) {
       ctx.fillStyle = UTD_ORANGE;
-      ctx.font = `700 ${Math.round(badgeSize * 0.28)}px Arial, sans-serif`;
+      ctx.font = `700 ${Math.round(logoSize * 0.28)}px Arial, sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       ctx.fillText("UTD", size / 2, size / 2);
       return;
     }
 
-    const logoSize = Math.round(badgeSize * 0.78);
-    const logoX = Math.round((size - logoSize) / 2);
-    const logoY = logoX;
     ctx.drawImage(logo, logoX, logoY, logoSize, logoSize);
   }
 
@@ -158,7 +142,7 @@
     drawFinder(ctx, origin, origin, moduleSize);
     drawFinder(ctx, origin + (qr.size - 7) * moduleSize, origin, moduleSize);
     drawFinder(ctx, origin, origin + (qr.size - 7) * moduleSize, moduleSize);
-    drawLogoBadge(ctx, outputSize, badgeRatio, hasLogo);
+    drawCenterLogo(ctx, outputSize, badgeRatio, hasLogo);
 
     ctx.lineWidth = Math.max(1, Math.round(outputSize * 0.002));
     ctx.strokeStyle = LINE;
