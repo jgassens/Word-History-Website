@@ -1,9 +1,10 @@
 # Ināt Open Apps Website
 
-Static project, privacy, and build pages for Ināt Open Apps. The site presents
-small local-first tools for research, teaching, document recovery, scheduling,
-Home Assistant, and citation workflows, with source links and macOS DMG builds
-hosted here where available.
+Static project, about, privacy, support, and build pages for Ināt Open Apps
+(plain-text legal name: Inat Open Apps). The site presents small local-first
+tools for research, teaching, document recovery, scheduling, Home Assistant,
+and citation workflows, with source links and macOS DMG builds hosted here
+where available.
 
 ## Cloudflare Pages
 
