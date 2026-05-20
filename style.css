@@ -1,20 +1,20 @@
 :root {
   color-scheme: light;
   --ink: #111111;
-  --muted: #6f7377;
-  --faint: #aeb3b7;
-  --paper: #fbfbfa;
+  --muted: #5f6468;
+  --faint: #b7babd;
+  --paper: #fbfaf5;
   --surface: #ffffff;
-  --line: #d9dcdf;
+  --line: #d8d8d2;
   --line-dark: #111111;
   --blue: #0057ff;
   --green: #008f5a;
-  --red: #c7352f;
-  --amber: #d47a00;
-  --word: #0057ff;
-  --calshot: #c7352f;
-  --codex: #008f5a;
-  --pubmate: #d47a00;
+  --red: #d52b1e;
+  --amber: #f2b705;
+  --word: var(--blue);
+  --calshot: var(--red);
+  --codex: var(--green);
+  --pubmate: var(--amber);
   --radius: 4px;
   --font-display:
     "dunbar-low",
@@ -47,7 +47,7 @@ body {
   margin: 0;
   color: var(--ink);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 480;
   line-height: 1.55;
   letter-spacing: 0;
 }
@@ -82,7 +82,7 @@ main {
 
 .site-header {
   min-height: 92px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 2px solid var(--line-dark);
 }
 
 .site-footer {
@@ -110,7 +110,7 @@ main {
   font-family: var(--font-ui);
   font-size: 0.76rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.045em;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -133,8 +133,8 @@ main {
 
 .brand-mark {
   display: inline-grid;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   place-items: center;
   border: 1px solid var(--blue);
   background: var(--blue);
@@ -158,11 +158,32 @@ main {
 }
 
 .home-hero {
-  max-width: 760px;
+  position: relative;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 220px);
+  max-width: none;
 }
 
 .app-hero {
   max-width: 860px;
+}
+
+.home-hero > * {
+  grid-column: 1;
+}
+
+.home-hero::after {
+  content: "";
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  justify-self: end;
+  width: clamp(120px, 16vw, 190px);
+  aspect-ratio: 1;
+  border: 2px solid var(--line-dark);
+  background: var(--surface);
+  box-shadow:
+    -34px 34px 0 var(--red),
+    -68px 0 0 var(--blue),
+    0 68px 0 var(--amber);
 }
 
 .index-number,
@@ -171,7 +192,7 @@ main {
   color: var(--muted);
   font-family: var(--font-ui);
   font-size: 0.76rem;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.045em;
   text-transform: uppercase;
 }
 
@@ -186,21 +207,21 @@ h1 {
   max-width: 900px;
   margin-bottom: 0;
   font-family: var(--font-display);
-  font-size: clamp(3.4rem, 6.8vw, 5.8rem);
-  font-weight: 400;
-  line-height: 1.02;
+  font-size: clamp(3rem, 6vw, 5.1rem);
+  font-weight: 520;
+  line-height: 1.04;
   letter-spacing: 0;
 }
 
 .app-hero h1 {
-  font-size: clamp(3rem, 6vw, 5.2rem);
+  font-size: clamp(2.8rem, 5.6vw, 4.8rem);
 }
 
 h2 {
   margin-bottom: 0;
   font-size: clamp(1.8rem, 4vw, 3.3rem);
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1;
   letter-spacing: 0;
 }
@@ -212,14 +233,30 @@ h3 {
 }
 
 .lead {
-  max-width: 520px;
+  max-width: 640px;
   margin-bottom: 0;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 1.05rem;
+}
+
+.project-note {
+  max-width: 780px;
+  margin: 0 0 clamp(28px, 5vw, 48px) 72px;
+  padding: 1rem 0 1.1rem 1rem;
+  border-top: 2px solid var(--line-dark);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  border-left: 8px solid var(--red);
+}
+
+.project-note p {
+  max-width: 720px;
+  margin-bottom: 0;
+  color: var(--muted);
 }
 
 .product-index {
-  border-top: 1px solid var(--line-dark);
+  border-top: 2px solid var(--line-dark);
 }
 
 .product-row {
@@ -229,7 +266,7 @@ h3 {
   grid-template-columns: 72px minmax(180px, 1.25fr) minmax(130px, 0.65fr) minmax(180px, 1fr) 72px;
   gap: 1rem;
   align-items: baseline;
-  min-height: 76px;
+  min-height: 84px;
   padding: 1rem 0;
   border-bottom: 1px solid var(--line);
   color: var(--ink);
@@ -258,7 +295,7 @@ h3 {
   top: 1rem;
   bottom: 1rem;
   left: 0;
-  width: 3px;
+  width: 8px;
   background: var(--signal);
 }
 
@@ -267,10 +304,14 @@ h3 {
 }
 
 .product-row:hover .product-name,
-.product-row:hover .product-code,
 .product-row:hover .product-action,
 .app-hero .index-number {
   color: var(--signal);
+}
+
+.product-row:hover .product-code {
+  background: var(--line-dark);
+  color: var(--surface);
 }
 
 .product-code,
@@ -284,7 +325,13 @@ dt {
 }
 
 .product-code {
-  padding-left: 18px;
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  background: var(--signal);
+  color: var(--surface);
+  font-weight: 700;
 }
 
 .product-name {
@@ -1082,9 +1129,9 @@ dd,
   background: transparent;
   color: var(--ink);
   font-family: var(--font-ui);
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.045em;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -1397,6 +1444,7 @@ dd,
   .product-row,
   .spec-grid,
   .principles,
+  .project-note,
   .screenshot-copy,
   .product-detail,
   .support-section,
@@ -1430,6 +1478,27 @@ dd,
     gap: 1.5rem;
   }
 
+  .project-note {
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero::after {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: start;
+    width: min(148px, 46vw);
+    margin: 0.8rem 0 1.4rem 68px;
+    box-shadow:
+      -24px 24px 0 var(--red),
+      -48px 0 0 var(--blue),
+      0 48px 0 var(--amber);
+  }
+
   .object-panel {
     min-height: 240px;
   }
@@ -1452,7 +1521,7 @@ dd,
 
   h1,
   .app-hero h1 {
-    font-size: 3.35rem;
+    font-size: 2.8rem;
   }
 
   .site-nav,

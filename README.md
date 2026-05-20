@@ -1,8 +1,9 @@
-# Ināt Apps Website
+# Ināt Open Apps Website
 
-Static marketing, privacy, and download pages for the Ināt published apps
-landing site. The home page links out to Office History, CalShot, Codex Terminal
-Pro, and PubMate, with macOS DMG downloads hosted here where available.
+Static project, privacy, and build pages for Ināt Open Apps. The site presents
+small local-first tools for research, teaching, document recovery, scheduling,
+Home Assistant, and citation workflows, with source links and macOS DMG builds
+hosted here where available.
 
 ## Cloudflare Pages
 
