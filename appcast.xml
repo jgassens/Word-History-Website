@@ -3,12 +3,12 @@
     <channel>
         <title>Office History</title>
         <item>
-            <title>2.0.9</title>
+            <title>2.0.10</title>
             <pubDate>Mon, 18 May 2026 10:07:38 -0500</pubDate>
-            <sparkle:version>18</sparkle:version>
-            <sparkle:shortVersionString>2.0.9</sparkle:shortVersionString>
+            <sparkle:version>19</sparkle:version>
+            <sparkle:shortVersionString>2.0.10</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://word-history-website.pages.dev/assets/OfficeHistory.dmg" length="9553179" type="application/octet-stream" sparkle:edSignature="qbdKjSYEbDnuSPyZHCJPVyXUIjkL/8x88ahU49iv9cgnUGlX9bddq/K8lgnHMa3j8mSx/0INFMwjc1q0D9UYBw=="/>
+            <enclosure url="https://word-history-website.pages.dev/assets/OfficeHistory.dmg" length="9539219" type="application/octet-stream" sparkle:edSignature="iQ+8nxktXYWJPydx4XhtvCJN4cbAxlG2m6mcDG/B6KbwW+nl6SM75DcXz5i41SNBnkiLiy/Zpp1uCO8w2HSjBw=="/>
         </item>
     </channel>
 </rss>
