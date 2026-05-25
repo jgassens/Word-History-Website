@@ -123,6 +123,39 @@ main {
   color: var(--ink);
 }
 
+.download-box {
+  display: inline-grid;
+  width: fit-content;
+  min-width: 180px;
+  min-height: 56px;
+  place-items: center;
+  padding: 0.9rem 1.25rem;
+  border: 2px solid var(--line-dark);
+  background: var(--signal);
+  box-shadow: 8px 8px 0 var(--line-dark);
+  color: var(--surface);
+  font-family: var(--font-ui);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.download-box:hover {
+  box-shadow: 5px 5px 0 var(--line-dark);
+  transform: translate(2px, 2px);
+}
+
+.download-box:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--signal) 30%, transparent);
+  outline-offset: 4px;
+}
+
+.pubmate-signal .download-box {
+  color: var(--ink);
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
