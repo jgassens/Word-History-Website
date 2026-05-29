@@ -380,6 +380,60 @@ dd,
   color: var(--muted);
 }
 
+.project-access {
+  display: grid;
+  grid-template-columns: 72px minmax(220px, 0.65fr) minmax(260px, 1fr);
+  gap: 1rem;
+  align-items: start;
+  padding: clamp(56px, 8vw, 96px) 0 24px;
+  border-top: 1px solid var(--line);
+}
+
+.project-access .index-number {
+  color: var(--blue);
+}
+
+.access-list {
+  display: grid;
+  border-top: 1px solid var(--line-dark);
+}
+
+.access-row {
+  --signal: var(--muted);
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) repeat(2, minmax(84px, auto));
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.access-row span {
+  min-width: 0;
+  font-weight: 700;
+}
+
+.access-row a {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.access-row a:hover {
+  border-color: var(--signal);
+  background: var(--signal);
+  color: var(--surface);
+}
+
 .principles {
   display: grid;
   grid-template-columns: 72px minmax(220px, 0.65fr) minmax(260px, 1fr);
@@ -1477,6 +1531,7 @@ dd,
   .product-row,
   .spec-grid,
   .principles,
+  .project-access,
   .project-note,
   .screenshot-copy,
   .product-detail,
@@ -1495,6 +1550,11 @@ dd,
   .product-row::before {
     top: 1.25rem;
     bottom: 1.25rem;
+  }
+
+  .access-row {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
   }
 
   .product-code,
