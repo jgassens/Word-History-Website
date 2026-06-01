@@ -21,6 +21,8 @@ not a software-as-a-service storefront.
 - [Codex Terminal Pro](https://jeremiahsrandom.website/codex-terminal-pro.html):
   an unofficial Home Assistant add-on for running OpenAI Codex CLI inside the
   `/config` workspace.
+- [Close Your Laptop](https://jeremiahsrandom.website/close-your-laptop.html):
+  battery-first macOS menu-bar sleep control for active Claude and Codex work.
 - [PubMate](https://jeremiahsrandom.website/pubmate.html): PMID and DOI markers
   in Word documents to EndNote import records and temporary citations.
 
@@ -32,6 +34,8 @@ repositories are maintained to match the language on this site:
 - `Word-History-Website`: static Inat Open Apps site.
 - `CalShot`: local-first macOS OCR-to-calendar review app.
 - `codex-terminal-pro`: Home Assistant add-on for Codex CLI in `/config`.
+- `Close-your-laptop`: closed-lid MacBook sleep control for active AI coding
+  sessions.
 - `PubMate`: Word PMID/DOI markers to EndNote handoff files.
 - `FoldForge`: local-first protein modeling and AlphaFold-style handoff
   workbench.

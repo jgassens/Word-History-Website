@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Close Your Laptop | Ināt Open Apps</title>
+    <meta
+      name="description"
+      content="Close Your Laptop keeps a MacBook awake with the lid closed while Claude or Codex is actively working, then lets macOS sleep again."
+    >
+    <link rel="canonical" href="https://jeremiahsrandom.website/close-your-laptop.html">
+    <link rel="image_src" href="https://jeremiahsrandom.website/assets/close-your-laptop-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ināt Open Apps">
+    <meta property="og:url" content="https://jeremiahsrandom.website/close-your-laptop.html">
+    <meta property="og:title" content="Close Your Laptop">
+    <meta property="og:description" content="Battery-first closed-lid sleep control for active Claude and Codex work.">
+    <meta property="og:image" content="https://jeremiahsrandom.website/assets/close-your-laptop-icon.png">
+    <meta property="og:image:alt" content="Close Your Laptop app icon with a laptop, terminal prompt, and moon.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Close Your Laptop">
+    <meta name="twitter:description" content="Battery-first closed-lid sleep control for active Claude and Codex work.">
+    <meta name="twitter:image" content="https://jeremiahsrandom.website/assets/close-your-laptop-icon.png">
+    <meta name="twitter:image:alt" content="Close Your Laptop app icon with a laptop, terminal prompt, and moon.">
+    <link rel="icon" href="assets/inat-logo.png" type="image/png">
+    <link rel="preconnect" href="https://use.typekit.net">
+    <link rel="preconnect" href="https://p.typekit.net">
+    <link rel="stylesheet" href="https://use.typekit.net/yrs0uxx.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Ināt Open Apps home">
+        <span class="brand-mark">I</span>
+        <span class="brand-name">Ināt Open Apps</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="downloads.html">Builds</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="word-history.html">Office History</a>
+        <a href="calshot.html">CalShot</a>
+        <a href="codex-terminal-pro.html">Codex Terminal Pro</a>
+        <a href="close-your-laptop.html" aria-current="page">Close Your Laptop</a>
+        <a href="pubmate.html">PubMate</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="app-hero laptop-signal">
+        <p class="index-number">CL</p>
+        <h1>Close Your Laptop</h1>
+        <p class="lead">Let Claude or Codex keep working with the lid closed, then let the Mac sleep.</p>
+        <a class="download-box" href="assets/CloseYourLaptop.dmg">Download</a>
+        <div class="action-line">
+          <a href="https://github.com/jgassens/Close-your-laptop">Source</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+      </section>
+
+      <section class="spec-grid" aria-label="Close Your Laptop specifications">
+        <dl>
+          <div>
+            <dt>System</dt>
+            <dd>macOS 13+</dd>
+          </div>
+          <div>
+            <dt>Watches</dt>
+            <dd>Claude, Codex</dd>
+          </div>
+          <div>
+            <dt>Mode</dt>
+            <dd>Menu bar</dd>
+          </div>
+          <div>
+            <dt>Goal</dt>
+            <dd>Battery-first sleep</dd>
+          </div>
+        </dl>
+        <div class="object-panel laptop-object" aria-label="Close Your Laptop status preview">
+          <img
+            src="assets/close-your-laptop-icon.png"
+            width="1024"
+            height="1024"
+            alt=""
+            aria-hidden="true"
+          >
+          <div class="laptop-status-stack" aria-hidden="true">
+            <span>Awake</span>
+            <strong>Codex active</strong>
+            <small>Sleep OK when work ends</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-detail laptop-signal" aria-labelledby="laptop-about">
+        <p class="index-number">About</p>
+        <div class="copy-stack">
+          <h2 id="laptop-about">A narrow keep-awake helper for active AI coding work.</h2>
+          <p>
+            Close Your Laptop is a tiny macOS menu-bar app for the moment when
+            an agent is still working but the MacBook needs to be closed. It
+            watches for active Claude and Codex sessions, holds sleep only while
+            that work is real, and releases the hold as soon as the run is done.
+          </p>
+        </div>
+        <ul class="detail-list">
+          <li>
+            <strong>Watches</strong>
+            <span>Claude Code, Codex CLI, Claude Desktop, and Codex Desktop when they show real project activity.</span>
+          </li>
+          <li>
+            <strong>Holds</strong>
+            <span>Uses native macOS sleep assertions plus a temporary closed-lid battery override when needed.</span>
+          </li>
+          <li>
+            <strong>Releases</strong>
+            <span>Clears sleep holds after agent work stops, or if the watchdog heartbeat stops refreshing.</span>
+          </li>
+          <li>
+            <strong>Boundary</strong>
+            <span>It is not a broad caffeine switch, desk clamshell mode, or a promise to keep the Mac awake forever.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="product-screenshot laptop-signal" aria-labelledby="laptop-screen-title">
+        <div class="screenshot-copy">
+          <p class="index-number">Screen</p>
+          <h2 id="laptop-screen-title">Awake only while work is active.</h2>
+          <p>
+            The menu-bar surface is built around the current assertion state,
+            detected agent work, watcher setup, and the closed-lid helper.
+          </p>
+        </div>
+        <figure class="screenshot-frame">
+          <div class="object-panel laptop-screen" role="img" aria-label="Close Your Laptop screen preview showing awake status, detected Codex work, sleep assertion state, and helper controls.">
+            <div class="laptop-menu-preview">
+              <div class="laptop-menu-header">
+                <span>Close Your Laptop</span>
+                <strong>Awake</strong>
+              </div>
+              <ul class="laptop-session-list">
+                <li><span>Agent</span><strong>Codex active</strong></li>
+                <li><span>Assertion</span><strong>PreventSystemSleep</strong></li>
+                <li><span>Closed lid</span><strong>Helper ready</strong></li>
+                <li><span>When idle</span><strong>Sleep OK</strong></li>
+              </ul>
+              <div class="laptop-menu-actions" aria-hidden="true">
+                <span>Refresh</span>
+                <span>Preferences</span>
+                <span>Quit</span>
+              </div>
+            </div>
+          </div>
+          <figcaption class="screen-caption">
+            <strong>Shown</strong>
+            <span>Representative screen preview of the Close Your Laptop menu-bar state and helper controls.</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="principles app-notes" aria-labelledby="laptop-notes">
+        <p class="index-number">How</p>
+        <h2 id="laptop-notes">Close the lid. Keep the run honest.</h2>
+        <ol>
+          <li><span>Install the app, then start a Claude or Codex session for real project work.</span></li>
+          <li><span>Use Preferences to install the tiny watcher or closed-lid helper when that workflow needs it.</span></li>
+          <li><span>Close the MacBook while the agent is active; the menu item reports whether sleep is being held.</span></li>
+          <li><span>When the agent finishes, Close Your Laptop releases the hold so macOS can sleep again.</span></li>
+        </ol>
+      </section>
+
+      <section class="support-section laptop-signal" aria-labelledby="laptop-support">
+        <p class="index-number">Support</p>
+        <div class="copy-stack">
+          <h2 id="laptop-support">Support starts with power state, helper state, and redacted diagnostics.</h2>
+          <p>
+            Closed-lid sleep behavior depends on macOS power assertions,
+            battery state, app activity, and whether the helper is installed.
+            Useful reports should show those facts without exposing project
+            names, tokens, prompts, or private logs.
+          </p>
+        </div>
+        <ul class="support-points">
+          <li>
+            <strong>Include</strong>
+            <span>macOS version, app version, Mac model, battery or power state, detected agent, and the relevant redacted diagnostics snapshot.</span>
+          </li>
+          <li>
+            <strong>Check</strong>
+            <span>Whether the app is in Applications, the watcher is current, the helper is installed, and <code>pmset</code> shows the expected sleep state.</span>
+          </li>
+          <li>
+            <strong>Private</strong>
+            <span>Do not share tokens, full project paths, full terminal transcripts, private prompts, or unredacted unified logs.</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Close Your Laptop</span>
+      <nav aria-label="Footer navigation">
+        <a href="index.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="downloads.html">Builds</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://github.com/jgassens/Close-your-laptop">GitHub</a>
+      </nav>
+    </footer>
+  </body>
+</html>
