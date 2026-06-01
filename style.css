@@ -125,6 +125,38 @@ main {
   color: var(--ink);
 }
 
+.action-line .repo-link {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: 18px auto;
+  gap: 0.6rem;
+  align-items: center;
+  min-height: 36px;
+  padding: 0.44rem 0.7rem 0.44rem 0.48rem;
+  border: 1px solid var(--line-dark);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.action-line .repo-link::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--line-dark);
+  background: var(--signal);
+  box-shadow: 5px 5px 0 var(--line-dark);
+}
+
+.action-line .repo-link:hover {
+  border-color: var(--signal);
+  color: var(--ink);
+  transform: translate(1px, 1px);
+}
+
+.action-line .repo-link:hover::before {
+  box-shadow: 3px 3px 0 var(--line-dark);
+}
+
 .download-box {
   display: inline-grid;
   width: fit-content;
