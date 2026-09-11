@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rain Bird Scheduler | Ināt Open Apps</title>
+    <meta
+      name="description"
+      content="Plan watering in Home Assistant, one zone at a time, with schedules, Cycle+Soak, and visible runtime adjustments."
+    >
+    <link rel="canonical" href="https://jeremiahsrandom.website/rainbird-scheduler.html">
+    <link rel="image_src" href="https://jeremiahsrandom.website/social-preview-linkedin.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ināt Open Apps">
+    <meta property="og:url" content="https://jeremiahsrandom.website/rainbird-scheduler.html">
+    <meta property="og:title" content="Rain Bird Scheduler">
+    <meta property="og:description" content="Plan watering in Home Assistant, one zone at a time, with schedules, Cycle+Soak, and visible runtime adjustments.">
+    <meta property="og:image" content="https://jeremiahsrandom.website/social-preview-linkedin.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rain Bird Scheduler">
+    <meta name="twitter:description" content="Plan watering in Home Assistant, one zone at a time, with schedules, Cycle+Soak, and visible runtime adjustments.">
+    <meta name="twitter:image" content="https://jeremiahsrandom.website/social-preview-linkedin.jpg">
+    <link rel="icon" href="assets/inat-logo.png" type="image/png">
+    <link rel="preconnect" href="https://use.typekit.net">
+    <link rel="preconnect" href="https://p.typekit.net">
+    <link rel="stylesheet" href="https://use.typekit.net/yrs0uxx.css">
+    <link rel="stylesheet" href="style.css?v=20260911">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Ināt Open Apps home">
+        <span class="brand-mark">I</span>
+        <span class="brand-name">Ināt Open Apps</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="downloads.html">Builds</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="word-history.html">Office History</a>
+        <a href="rainbird-scheduler.html" aria-current="page">Rain Bird Scheduler</a>
+        <a href="codex-terminal-pro.html">Codex Terminal Pro</a>
+        <a href="after-dork.html">After Dork</a>
+        <a href="pubmate.html">PubMate</a>
+      </nav>
+    </header>
+
+    <main class="project-page rainbird-scheduler-signal">
+      <section class="app-hero rainbird-scheduler-signal">
+        <p class="index-number">RB</p>
+        <h1>Rain Bird Scheduler</h1>
+        <p class="lead">Plan watering in Home Assistant, one zone at a time, with schedules, Cycle+Soak, and visible runtime adjustments.</p>
+        <a class="download-box" href="#rainbird-scheduler-install">Installation guide</a>
+        <div class="action-line">
+          <a class="repo-link" href="https://github.com/jgassens/RainBirdScheduler">GitHub</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+      </section>
+
+      <p class="project-status"><strong>Pre-release.</strong> The project README reports that validation against real LNK/LNK2 controllers is still pending.</p>
+      <section class="spec-grid" aria-label="Rain Bird Scheduler requirements">
+        <dl>
+          <div><dt>System</dt><dd>Home Assistant 2026.2+</dd></div>
+          <div><dt>Controller</dt><dd>Supported Rain Bird LNK / LNK2</dd></div>
+          <div><dt>Requires</dt><dd>Configured core Rain Bird integration</dd></div>
+          <div><dt>Install</dt><dd>HACS custom integration or manual copy</dd></div>
+        </dl>
+        <div class="watering-plan">
+          <h2>One start time. Three zones.</h2>
+          <p>Example plan for a requested 9:00 AM start, with five-second gaps between zones.</p>
+          <ol>
+            <li><strong>Front lawn</strong><span>9:00:00–9:12:00</span></li>
+            <li><strong>Side lawn</strong><span>9:12:05–9:20:05</span></li>
+            <li><strong>Back lawn</strong><span>9:20:10–9:35:10</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="product-detail rainbird-signal" aria-labelledby="rainbird-scheduler-about">
+        <p class="index-number">About</p>
+        <div class="copy-stack">
+          <h2 id="rainbird-scheduler-about">A watering plan you can inspect.</h2>
+          <p>Choose watering days, start times, zone order, and minutes per zone. Rain Bird Scheduler turns those choices into a non-overlapping plan and shows requested, planned, and observed runs in Home Assistant.</p>
+        </div>
+        <ul class="detail-list">
+          <li><strong>Schedules</strong><span>Weekdays, odd/even days, every-N-days, multiple starts, and sunrise or sunset offsets.</span></li>
+          <li><strong>Cycle+Soak</strong><span>Split watering into shorter cycles with time to soak between them. Soil and slope suggestions remain editable.</span></li>
+          <li><strong>Adjustments</strong><span>Use manual percentages, monthly or seasonal curves, or Home Assistant entities, with the calculation shown.</span></li>
+          <li><strong>Weather</strong><span>Configure rain handling and a temperature-based freeze guard, with reasons for skipped or interrupted watering.</span></li>
+        </ul>
+      </section>
+
+      <section class="product-screenshot rainbird-signal" aria-labelledby="rainbird-scheduler-screen">
+        <div class="screenshot-copy">
+          <p class="index-number">Screen</p>
+          <h2 id="rainbird-scheduler-screen">See the week’s watering at a glance.</h2>
+          <p>The Irrigation panel brings together the upcoming plan, current controller state, zone settings, runtime adjustments, and run history.</p>
+        </div>
+        <figure class="screenshot-frame">
+          <a class="screenshot-link" href="assets/rainbird-scheduler-overview.png" aria-label="View the Rain Bird Scheduler overview at full size">
+            <img class="project-screenshot" src="assets/rainbird-scheduler-overview.png" width="1600" height="912" loading="lazy" alt="Rain Bird Scheduler Irrigation panel showing scheduler state, the next planned run, rain status, and a seven-day timeline colored by zone.">
+          </a>
+          <figcaption class="screen-caption"><strong>Shown</strong><span>Overview screenshot from the project README. Select the image to view it at full size.</span></figcaption>
+        </figure>
+      </section>
+
+      <section class="principles app-notes" aria-labelledby="rainbird-scheduler-install">
+        <p class="index-number">Install</p>
+        <h2 id="rainbird-scheduler-install">Add it to Home Assistant.</h2>
+        <ol>
+          <li><span>Set up your supported controller with Home Assistant’s core Rain Bird integration first.</span></li>
+          <li><span>In HACS, open Custom repositories. Add <a class="text-link" href="https://github.com/jgassens/RainBirdScheduler">jgassens/RainBirdScheduler</a> with category Integration.</span></li>
+          <li><span>Install Rain Bird Scheduler and restart Home Assistant.</span></li>
+          <li><span>Go to Settings → Devices &amp; Services → Add integration → Rain Bird Scheduler. Select your controller, choose which system manages its schedules, and review the native-schedule conflict warning.</span></li>
+        </ol>
+      </section>
+      <p class="note">For manual installation, follow the <a class="text-link" href="https://github.com/jgassens/RainBirdScheduler#installation">repository instructions</a>. This is a Home Assistant integration, not a Mac app.</p>
+
+      <section class="support-section rainbird-signal" aria-labelledby="rainbird-scheduler-support">
+        <p class="index-number">Support</p>
+        <div class="copy-stack">
+          <h2 id="rainbird-scheduler-support">Compare the plan with what ran.</h2>
+          <p>Use the run history and diagnostics when reporting an issue. The scheduler works through Home Assistant’s existing Rain Bird integration; it does not establish a separate controller connection.</p>
+        </div>
+        <ul class="support-points">
+          <li><strong>Include</strong><span>Home Assistant and scheduler versions, controller model, requested schedule, observed behavior, and redacted diagnostics.</span></li>
+          <li><strong>Check</strong><span>Core Rain Bird connectivity, rain delay, scheduler status, and any onboard schedule conflict.</span></li>
+          <li><strong>Report</strong><span><a class="text-link" href="https://github.com/jgassens/RainBirdScheduler/issues">Open a GitHub issue</a> after removing passwords, tokens, and private configuration.</span></li>
+        </ul>
+      </section>
+      <p class="note">This project is not affiliated with or endorsed by Rain Bird Corporation.</p>
+    </main>
+    <footer class="site-footer">
+      <span>Rain Bird Scheduler</span>
+      <nav aria-label="Footer navigation">
+        <a href="index.html">Projects</a>
+        <a href="downloads.html">Builds</a>
+        <a href="rainbird-scheduler.html#rainbird-scheduler-support">Support</a>
+        <a href="https://github.com/jgassens/RainBirdScheduler">GitHub</a>
+      </nav>
+    </footer>
+  </body>
+</html>

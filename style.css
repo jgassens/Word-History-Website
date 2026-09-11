@@ -361,6 +361,15 @@ h3 {
   --signal: var(--laptop);
 }
 
+.rainbird-signal,
+.rainbird-scheduler-signal {
+  --signal: #006d77;
+}
+
+.after-dork-signal {
+  --signal: var(--violet);
+}
+
 .product-row::before {
   content: "";
   position: absolute;
@@ -1387,6 +1396,16 @@ dd,
   --signal: var(--laptop);
 }
 
+.download-card.rainbird-signal,
+.access-row.rainbird-signal {
+  --signal: #006d77;
+}
+
+.download-card.after-dork-signal,
+.access-row.after-dork-signal {
+  --signal: var(--violet);
+}
+
 .download-card h2,
 .status-band h2 {
   font-size: clamp(1.7rem, 3vw, 2.6rem);
@@ -1425,6 +1444,102 @@ dd,
 .laptop-signal .button:hover {
   background: var(--signal);
   border-color: var(--signal);
+}
+
+.rainbird-signal .button:hover,
+.after-dork-signal .button:hover {
+  background: var(--signal);
+  border-color: var(--signal);
+}
+
+.project-image {
+  margin: 0;
+  align-self: start;
+}
+
+.project-image img,
+.project-screenshot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line-dark);
+}
+
+.project-image figcaption {
+  padding-top: 0.7rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.screenshot-link {
+  display: block;
+}
+
+.screenshot-link:focus-visible {
+  outline: 3px solid var(--signal);
+  outline-offset: 5px;
+}
+
+.project-status {
+  margin: -1rem 0 2.5rem;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid var(--signal);
+  background: var(--surface);
+  color: var(--muted);
+}
+
+.project-status strong {
+  color: var(--ink);
+}
+
+.watering-plan {
+  padding: clamp(1rem, 3vw, 2rem);
+  border: 1px solid var(--line-dark);
+  border-top: 4px solid var(--signal);
+  background: var(--surface);
+}
+
+.watering-plan h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.watering-plan p {
+  color: var(--muted);
+}
+
+.watering-plan ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.watering-plan li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.3rem 1rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.watering-plan li span {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.project-page .spec-grid > *,
+.project-page .product-detail > *,
+.project-page .support-section > * {
+  min-width: 0;
+}
+
+.project-page .detail-list strong,
+.project-page .support-points strong,
+.project-page .screen-caption strong,
+.project-page dt {
+  font-size: 0.875rem;
 }
 
 .text-link {
