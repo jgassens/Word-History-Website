@@ -25,6 +25,9 @@ not a software-as-a-service storefront.
   chemistry screen savers for macOS, with a built-in updater.
 - [PubMate](https://jeremiahsrandom.website/pubmate.html): PMID and DOI markers
   in Word documents to EndNote import records and temporary citations.
+- [ChemDraft](https://jgassens.github.io/ChemDraft/): lightweight, open-source
+  (Apache-2.0) chemical drawing for macOS (Apple silicon) and 64-bit Windows,
+  built around local files and plugins. Version 1.0.0.
 
 ## Repository Metadata
 
@@ -36,6 +39,7 @@ repositories are maintained to match the language on this site:
 - `codex-terminal-pro`: Home Assistant add-on for Codex CLI in `/config`.
 - `after-dork`: chemistry screen savers inspired by 1990s classics.
 - `PubMate`: Word PMID/DOI markers to EndNote handoff files.
+- `ChemDraft`: lightweight, open-source chemical drawing app for local files and plugins.
 - `FoldForge`: local-first protein modeling and AlphaFold-style handoff
   workbench.
 - `MeterialImmunome`: Streamlit and SQLite claim-curation cockpit.
